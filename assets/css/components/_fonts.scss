@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'Montserrat';
+    font-display: swap;
+    src: url('./../fonts/Montserrat-Regular.eot');
+    src: url('./../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./../fonts/Montserrat-Regular.woff2') format('woff2'),
+        url('./../fonts/Montserrat-Regular.woff') format('woff'),
+        url('./../fonts/Montserrat-Regular.ttf') format('truetype'),
+        url('./../fonts/Montserrat-Regular.svg#Montserrat-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-display: swap;
+    src: url('./../fonts/Montserrat-Bold.eot');
+    src: url('./../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./../fonts/Montserrat-Bold.woff2') format('woff2'), url('./../fonts/Montserrat-Bold.woff') format('woff'),
+        url('./../fonts/Montserrat-Bold.ttf') format('truetype'),
+        url('./../fonts/Montserrat-Bold.svg#Montserrat-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-display: swap;
+    src: url('./../fonts/Montserrat-Black.eot');
+    src: url('./../fonts/Montserrat-Black.eot?#iefix') format('embedded-opentype'),
+        url('./../fonts/Montserrat-Black.woff2') format('woff2'), url('./../fonts/Montserrat-Black.woff') format('woff'),
+        url('./../fonts/Montserrat-Black.ttf') format('truetype'),
+        url('./../fonts/Montserrat-Black.svg#Montserrat-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-display: swap;
+    src: url('./../fonts/Merriweather-Bold.eot');
+    src: url('./../fonts/Merriweather-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./../fonts/Merriweather-Bold.woff2') format('woff2'),
+        url('./../fonts/Merriweather-Bold.woff') format('woff'),
+        url('./../fonts/Merriweather-Bold.ttf') format('truetype'),
+        url('./../fonts/Merriweather-Bold.svg#Merriweather-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-display: swap;
+    src: url('./../fonts/Merriweather-Regular.eot');
+    src: url('./../fonts/Merriweather-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./../fonts/Merriweather-Regular.woff2') format('woff2'),
+        url('./../fonts/Merriweather-Regular.woff') format('woff'),
+        url('./../fonts/Merriweather-Regular.ttf') format('truetype'),
+        url('./../fonts/Merriweather-Regular.svg#Merriweather-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-display: swap;
+    src: url('./../fonts/Merriweather-Italic.eot');
+    src: url('./../fonts/Merriweather-Italic.eot?#iefix') format('embedded-opentype'),
+        url('./../fonts/Merriweather-Italic.woff2') format('woff2'),
+        url('./../fonts/Merriweather-Italic.woff') format('woff'),
+        url('./../fonts/Merriweather-Italic.ttf') format('truetype'),
+        url('./../fonts/Merriweather-Italic.svg#Merriweather-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Hasklig';
+    src: url('./../fonts/Hasklig-It.eot');
+    src: url('./../fonts/Hasklig-It.eot?#iefix') format('embedded-opentype'),
+        url('./../fonts/Hasklig-It.woff2') format('woff2'), url('./../fonts/Hasklig-It.woff') format('woff'),
+        url('./../fonts/Hasklig-It.ttf') format('truetype'), url('./../fonts/Hasklig-It.svg#Hasklig-It') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hasklig';
+    src: url('./../fonts/Hasklig-Regular.eot');
+    src: url('./../fonts/Hasklig-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./../fonts/Hasklig-Regular.woff2') format('woff2'), url('./../fonts/Hasklig-Regular.woff') format('woff'),
+        url('./../fonts/Hasklig-Regular.ttf') format('truetype'),
+        url('./../fonts/Hasklig-Regular.svg#Hasklig-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

@@ -1,0 +1,58 @@
+.list-inline {
+    li {
+        @apply inline mr-4;
+
+        &:last-of-type {
+            @apply mr-0;
+        }
+    }
+}
+
+.list-nav {
+    @apply text-center;
+
+    @screen md {
+        @apply text-right;
+    }
+
+    li {
+        @apply inline-block mr-4 mb-2;
+
+        @screen md {
+            @apply block mr-0;
+        }
+
+        button {
+            @apply text-gray-400 font-headings border-0 relative block ml-auto;
+
+            @include transition(color, margin);
+        }
+
+        &:hover,
+        &.is-active {
+            button {
+                @apply text-orange-500;
+            }
+        }
+
+        &:hover {
+            button {
+                @screen md {
+                    @apply mr-px;
+                }
+            }
+        }
+
+        &.is-active {
+            button {
+                @apply font-bold;
+            }
+        }
+    }
+}
+
+.is-active {
+    button {
+        @apply font-bold text-orange-500;
+    }
+}

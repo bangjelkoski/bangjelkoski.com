@@ -1,0 +1,76 @@
+.page-enter-active,
+.page-leave-active {
+    @include transition(opacity);
+    // transition: opacity 150s ease-in-out;
+}
+
+.page-enter,
+.page-leave-to {
+    opacity: 0;
+}
+
+.coursor-blinking {
+    animation: 1s blink step-end infinite;
+}
+
+.transition-width {
+    @include transition(width);
+}
+
+.tag {
+    &:last-of-type {
+        @apply mr-0;
+    }
+}
+
+@keyframes blink {
+    from,
+    to {
+        color: transparent;
+    }
+    50% {
+        @apply text-gray-300;
+    }
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: orange;
+    }
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(0.99);
+    }
+    20% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(0.99);
+    }
+    60% {
+        transform: scale(1);
+    }
+    80% {
+        transform: scale(0.99);
+    }
+    100% {
+        transform: scale(0.99);
+    }
+}

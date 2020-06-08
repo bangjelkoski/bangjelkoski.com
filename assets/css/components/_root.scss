@@ -1,0 +1,248 @@
+:root {
+    @apply text-gray-800;
+}
+
+html {
+    @apply h-full;
+    font-size: 16px;
+
+    @screen md {
+        font-size: 18px;
+    }
+
+    @screen lg {
+        font-size: 19px;
+    }
+}
+
+html,
+body {
+    @apply min-h-full;
+    background: theme('colors.body.first');
+    background-image: linear-gradient(15deg, theme('colors.body.first') 33%, theme('colors.body.second') 33.1%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body {
+    @apply h-full text-base font-base text-gray-200 antialiased leading-relaxed;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+
+    &.about {
+        header {
+            @screen md {
+                transform: translate(25%, 100px);
+                margin-top: -100px;
+                padding-right: 1rem;
+                padding-left: 1rem;
+
+                & > .inner {
+                    @apply w-3/4;
+                }
+            }
+
+            @screen lg {
+                transform: translate(25%, 150px);
+                margin-top: -150px;
+                padding-right: 1rem;
+                padding-left: 1rem;
+
+                & > .inner {
+                    @apply w-3/4;
+                }
+            }
+        }
+
+        .content {
+            @screen md {
+                margin-top: calc(100px - 1.5rem);
+            }
+
+            @screen lg {
+                margin-top: calc(150px - 2rem);
+            }
+        }
+    }
+
+    &.skills {
+        header {
+            .stack {
+                @screen md {
+                    @apply overflow-hidden border-r border-orange-500 whitespace-no-wrap;
+                    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+                }
+            }
+        }
+    }
+}
+
+.stack {
+    @include transition(transform);
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+header,
+main,
+footer,
+.content {
+    @include transition(all);
+}
+
+pre,
+code {
+    @apply font-code;
+}
+
+:not(pre) > code {
+    @apply bg-gray-800 py-px px-1 rounded;
+}
+
+ul,
+ol {
+    @apply mb-6 pl-12;
+
+    li {
+        @apply my-2;
+
+        &:last-of-type {
+            @apply mb-0;
+        }
+    }
+
+    &.marginless {
+        @apply px-0;
+    }
+}
+
+.article-content {
+    img {
+        @apply mx-auto;
+    }
+
+    h2 {
+        @apply text-2xl mb-6;
+    }
+
+    h3 {
+        @apply text-xl mb-6;
+    }
+
+    h4 {
+        @apply text-lg mb-6;
+    }
+
+    .marginless {
+        @apply mb-0;
+    }
+}
+
+ul {
+    @apply list-disc;
+}
+
+ol {
+    @apply list-decimal;
+}
+
+hr,
+.hr {
+    @apply border-gray-800;
+    margin-bottom: calc(2rem - 1px);
+}
+
+pre {
+    @apply mb-8;
+
+    code {
+        &.hljs {
+            @apply rounded-lg shadow-md  p-4;
+        }
+    }
+}
+
+button {
+    @apply font-base;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply font-bold font-headings tracking-tight leading-tight;
+
+    &.font-normal {
+        @apply font-normal;
+    }
+
+    &.font-black {
+        @apply font-black;
+    }
+
+    &.font-base {
+        @apply font-base;
+    }
+}
+
+strong {
+    @apply text-gray-100 font-bold;
+}
+
+button:focus,
+:focus {
+    @apply outline-none;
+}
+
+[v-cloak] {
+    @apply hidden;
+}
+
+a {
+    @apply text-gray-200 border-b-2 border-orange-500;
+
+    @include transition(color, border-color);
+
+    &:hover {
+        @apply border-orange-700 text-white;
+    }
+
+    &.inverted {
+        @apply text-gray-600 border-orange-100;
+
+        &:hover {
+            @apply border-orange-200 text-gray-700;
+        }
+    }
+}
+
+p {
+    @apply mb-6;
+    letter-spacing: 0.01rem;
+
+    &:last-of-type {
+        @apply mb-0;
+    }
+}
