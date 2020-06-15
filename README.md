@@ -20,7 +20,7 @@ _Built for fun and convenient usage and editing/publishing of blog posts._
 1. Clone the repository
 
 ```bash
-$ git clone git@github.com:bangjelkoski/portfolio.git
+$ git clone git@github.com:bangjelkoski/bangjelkoski.com.git portfolio
 $ cd portfolio
 $ yarn
 ```
