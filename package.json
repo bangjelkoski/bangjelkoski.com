@@ -19,7 +19,7 @@
     "@nuxtjs/sitemap": "^2.3.1",
     "front-matter": "^4.0.2",
     "frontmatter-markdown-loader": "^3.5.0",
-    "highlight.js": "^10.0.3",
+    "highlight.js": "^10.1.2",
     "markdown-it-attrs": "^3.0.3",
     "markdown-it-highlightjs": "^3.1.0",
     "node-sass": "^4.14.1",
