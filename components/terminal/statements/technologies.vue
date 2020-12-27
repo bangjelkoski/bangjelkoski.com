@@ -6,7 +6,7 @@
       ></template
     >
     <template slot="content">{{
-      `["HTML5", "CSS3 (Sass, Frameworks, Responsiveness)", "JavaScript (Node, ES6+, Express, Vue, Nuxt, React, jQuery)", "PHP (Laravel)", "databases (MySQL, SQLite, MongoDB)", "OOP and Design Patterns", "Git" ...]`
+      `["HTML5", "CSS3 (Sass, Frameworks, Responsiveness)", "JavaScript (Node, ES6+, TypeScript, Vue, Nuxt, React)", "PHP (Laravel)", "databases (MySQL, SQLite, MongoDB)", "OOP and Design Patterns", "Git" ...]`
     }}</template>
   </statement>
 </template>
