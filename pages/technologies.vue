@@ -20,6 +20,18 @@
       >.
     </p>
     <p>
+      <strong class="text-orange-500">JavaScript</strong> - JavaScript is
+      probably the biggest name in application development right now. Proficient
+      in vanilla JavaScript and TypeScript with the latest ES6+ standards,
+      <strong>JavaScript is my preferred choice</strong> to build client-side
+      (also server-side nowadays) applications.
+      <strong>Vue.js is my framework of choice</strong>, and I have been using
+      it to <strong>build and scale projects for 3 years now</strong>. While
+      working on my side projects, I try to deepen my knowledge about
+      <strong>Node.js and React</strong> by using them constantly and daily. And
+      yes, I also know jQuery.
+    </p>
+    <p>
       <strong class="text-orange-500">PHP</strong> - PHP is my day-to-day
       language for
       <strong>building web applications and API's</strong> alongside JavaScript
@@ -31,18 +43,6 @@
         >Booksi</a
       >
       using Laravel and Vue.js 2 years ago.
-    </p>
-    <p>
-      <strong class="text-orange-500">JavaScript</strong> - JavaScript is
-      probably the biggest name in application development right now. Proficient
-      in vanilla JavaScript with the latest ES6+ standards,
-      <strong>JavaScript is my preferred choice</strong> to build client-side
-      (also server-side nowadays) applications.
-      <strong>Vue.js is my framework of choice</strong>, and I have been using
-      it to <strong>build and scale projects for 3 years now</strong>. While
-      working on my side projects, I try to deepen my knowledge about
-      <strong>Node.js and React</strong> by using them constantly and daily. And
-      yes, I also know jQuery.
     </p>
     <p>
       <strong class="text-orange-500">Databases</strong> - Even though
