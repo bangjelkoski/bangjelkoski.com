@@ -499,7 +499,7 @@ export interface ApiClient {
 
 // classes/HttpClient.ts
 import axios from "axios";
-import ApiClient from "domain/ApiClient";
+import ApiClient from "contracts/ApiClient";
 
 export function HttpClient(): ApiClient {
   return {
@@ -513,7 +513,7 @@ export function HttpClient(): ApiClient {
 }
 
 // services/SignupService.ts
-import ApiClient from "domain/ApiClient"; // ✅ the domain depends on an abstraction
+import ApiClient from "contracts/ApiClient"; // ✅ the domain depends on an abstraction
 
 export function SignupService(client: ApiClient) {
   return async (email: string, password: string) => {
@@ -532,8 +532,8 @@ With the power of dependency inversion, our `SignupService` can now use any 
 
 ```ts
 // index.ts
-import SignupService from "domain/signup";
-import HttpClient from "infra/HttpClient";
+import SignupService from "services/signup";
+import HttpClient from "classes/HttpClient";
 
 const signup = SignupService(HttpClient());
 
