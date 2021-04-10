@@ -2,7 +2,7 @@
 title: Cosmos SDK overview through the lens of a JavaScript Developer
 date: 2021/04/10
 slug: cosmos-sdk-overview-through-the-lens-of-a-javascript-developer
-excerpt: Explore the world of the world’s most popular framework for building application-specific blockchains.
+excerpt: Explore the world’s most popular framework for building application-specific blockchains.
 keywords: cosmos, cosmos-sdk, blockchain, tendermint, bft, byzantine fault tolerance
 image: /images/cosmos-sdk.jpeg
 category: Blockchain
