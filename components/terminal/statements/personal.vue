@@ -4,7 +4,7 @@
       >$ Bojan.<nuxt-link :to="{ name: 'about' }">personal</nuxt-link></template
     >
     <template slot="content">{{
-      `"Age ${new Date().getFullYear() - 1994}. Belgrade, Serbia"`
+      `"Age ${new Date().getFullYear() - 1994}. Skopje, Macedonia"`
     }}</template>
   </statement>
 </template>

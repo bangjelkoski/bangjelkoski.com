@@ -17,12 +17,12 @@
     <div class="bg-code font-code py-6 px-4 rounded-b-lg">
       <personal class="mb-6" />
       <contactStatement class="mb-6" />
+      <education class="mb-6" />
       <resume class="mb-6" />
       <experience class="mb-6" />
-      <education class="mb-6" />
-      <skills class="mb-6" />
       <technologies class="mb-6" />
-      <interests class="mb-6" />
+      <skills class="mb-6" />
+      <interests v-if="false" class="mb-6" />
       <projects class="mb-6" />
       <blank />
     </div>

@@ -1,9 +1,8 @@
 <template>
   <statement class="mb-6">
     <template slot="command">$ Bojan.experience</template>
-    <template slot="content">{{
-      `["Lead TypeScript Engineer at Injective Protocol 1y+", "Full Stack Developer at World Trade Organization 1y", "Full Stack Developer at Nulisec 2y+", "Full Stack Developer at NG Solutions 2y", "Web Developer at Dev&Webdesign 2y"]`
-    }}</template>
+    <!-- eslint-disable vue/no-v-html -->
+    <template slot="content"><span v-html="contentHtml"></span></template>
   </statement>
 </template>
 
@@ -13,6 +12,17 @@ import statement from './../statement'
 export default {
   components: {
     statement
+  },
+
+  computed: {
+    contentHtml() {
+      return `[<br/>
+          &nbsp;&nbsp;"Senior Sofware Engineer at InjectiveLabs 2y+", <br/>
+          &nbsp;&nbsp;"Full Stack Developer at World Trade Organization 1y", <br/>
+          &nbsp;&nbsp;"Full Stack Developer at Nulisec 2y+", <br/>
+          &nbsp;&nbsp;"Full Stack Developer at NG Solutions 2y",<br/>
+      ]`
+    }
   }
 }
 </script>

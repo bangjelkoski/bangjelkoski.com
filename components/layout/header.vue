@@ -18,9 +18,9 @@
             <h3
               class="uppercase text-gray-500 text-sm tracking-wide font-normal stack"
             >
-              Full Stack Developer
-              <span class="text-orange-500">&bull;</span> BSc in Electrical Eng.
-              & Computer Science
+              Senior Software Engineer
+              <span class="text-orange-500">&bull;</span> MSc in Software
+              Engineering
             </h3>
           </div>
         </div>

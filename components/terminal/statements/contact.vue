@@ -3,8 +3,8 @@
     <template slot="command">$ Bojan.contact</template>
     <template slot="content">
       <!-- eslint-disable vue/no-v-html -->
-      <span v-html="firstHtml"></span> "<mail></mail>"]</template
-    >
+      <span v-html="firstHtml"></span> "<mail></mail>"]
+    </template>
   </statement>
 </template>
 

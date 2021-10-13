@@ -6,8 +6,8 @@
     <a v-if="timesClicked === 1" @click.stop.prevent="timesClicked++">
       Click one more time
     </a>
-    <a v-if="timesClicked >= 2" href="mailto:me@bangjelkoski.com">
-      me@bangjelkoski.com
+    <a v-if="timesClicked >= 2" href="mailto:hello@abojan.me">
+      hello@abojan.me
     </a>
   </span>
 </template>

@@ -2,39 +2,33 @@
   <section>
     <h3 class="text-2xl mb-4">Let me introduce myself! 👋</h3>
     <p>
-      A <strong>Full Stack Developer</strong>, currently living in Belgrade,
-      Serbia but originally from a small and beautiful country named Macedonia.
-      Even though I passed a quarter of a century (aged
-      {{ new Date().getFullYear() - 1994 }}), I feel more
-      <strong>alive and energized</strong> than ever. Devoted to my mission to
-      <strong>inspire and motivate people to do better</strong>, I always try to
-      be kind, humble and give back to the people around me. Having people
-      around me that care about both my successes and failures, accomplishing
-      the tasks that I set for myself, achieving long term goals, putting
-      efforts into preserving our environment are some of the
+      I'm a <strong>Senior Software Engineer</strong> currently living in
+      Skopje, Macedonia, aged {{ new Date().getFullYear() - 1994 }}. Devoted to
+      my mission to <strong>inspire and motivate people to do better</strong>, I
+      always try to be kind, humble, and give back to the people around me.
+      Having people around me who care about my successes and failures,
+      accomplishing the tasks that I set for myself, achieving long-term goals,
+      and putting efforts into preserving our environment are
       <strong>things that make me happy.</strong>
     </p>
     <p>
-      At the
-      <a href="https://etf.bg.ac.rs" target="_blank" rel="noopener noreferrer"
-        >University of Belgrade</a
-      >, I have completed my
-      <strong
-        >bachelor studies in Electrical Engineering and Computer science</strong
-      >
-      in March 2018. At the moment, I am attending my
-      <strong>master studies for Software Engineering</strong> at the same
-      university. Keeping my skills sharp and up to date is my everyday goal. I
-      usually do that by taking courses, reading books or building stuff.
+      I have completed my
+      <strong>master's studies in Software Engineering</strong> at the
+      <a href="https://etf.bg.ac.rs" target="_blank" rel="noopener noreferrer">
+        University of Belgrade
+      </a>
+      in September 2021. Keeping my skills sharp and up to date is my everyday
+      goal. I usually do that by taking courses, reading books, or building
+      stuff.
     </p>
     <p>
-      As a Full Stack developer with over
+      As a Senior Software Engineer with over
       <nuxt-link :to="{ name: 'skills' }"
-        >6 years of diverse development experience</nuxt-link
+        >eight years of diverse development experience</nuxt-link
       >, I build products focused on customer satisfaction. I manage
       <strong>all aspects of the web development cycle</strong>, from concept to
-      requirements definition, design, development, launch, maintenance and user
-      support. I enjoy the client-facing role and working closely with team
+      requirements definition, design, development, launch, maintenance, and
+      user support. I enjoy the client-facing role and working closely with team
       members to produce <strong>high-quality deliverables.</strong>
     </p>
     <p>

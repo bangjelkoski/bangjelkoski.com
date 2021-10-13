@@ -3,9 +3,8 @@
     <template slot="command"
       >$ Bojan.<nuxt-link :to="{ name: 'skills' }">skills</nuxt-link></template
     >
-    <template slot="content">{{
-      `["Software Engineering", "Project Management", "Strong Communications Skills", "Team Player", "Quality Assurance", "Eye for Detail", "Independent and responsible", "Remote work", ... ]`
-    }}</template>
+    <!-- eslint-disable vue/no-v-html -->
+    <template slot="content"><span v-html="contentHtml"></span></template>
   </statement>
 </template>
 
@@ -15,6 +14,18 @@ import statement from './../statement'
 export default {
   components: {
     statement
+  },
+
+  computed: {
+    contentHtml() {
+      return `[<br/>
+          &nbsp;&nbsp;"Leadership (Taking initiative, Mentoring, Inspiring others, ...)", <br/>
+          &nbsp;&nbsp;"Product Engineering (Requirements, Specs, Eliminating complexity, ...)", <br/>
+          &nbsp;&nbsp;"Software Engineering (Code Quality, Analysis and research, Debugging, ...)", <br/>
+          &nbsp;&nbsp;"Project Management (Time management, Team management, ...)", <br/>
+          &nbsp;&nbsp;"Soft Skills (Efficient communication, Team player, Reponsible, Independent, Remote work, ...)", <br/>
+      ]`
+    }
   }
 }
 </script>

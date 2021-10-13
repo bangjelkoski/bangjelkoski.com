@@ -2,13 +2,12 @@
   <section>
     <h3 class="text-2xl mb-4">Some of the things I can do! 👨🏻‍💻</h3>
     <p>
-      I am committed and ambitions professional that can quickly assimilate new
-      ideas and concepts and demonstrate a logical and analytical approach to
-      solving complex problems and issues. I am able to analyze code and
-      engineer well-researched, cost-effective and responsive solutions. I
-      manage all aspects of the web development cycle, from concept to
-      requirements definition, design, development, launch, maintenance and user
-      support.
+      I am a committed and ambitious professional that can quickly assimilate
+      new ideas and concepts and demonstrate a logical and analytical approach
+      to solving complex problems and issues. I can analyze code and engineer
+      well-researched, cost-effective and responsive solutions. I manage all
+      aspects of the web development cycle, from concept to requirements
+      definition, design, development, launch, maintenance, and user support.
     </p>
     <p>
       <strong class="text-orange-500">Software Engineering</strong> - My
