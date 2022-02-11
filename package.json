@@ -21,7 +21,7 @@
     "frontmatter-markdown-loader": "^3.5.0",
     "highlight.js": "^10.0.3",
     "markdown-it-attrs": "^3.0.3",
-    "markdown-it-highlightjs": "^3.1.0",
+    "markdown-it-highlightjs": "^3.3.1",
     "nuxt": "^2.12.2",
     "sticky-sidebar": "^3.3.1",
     "vue-affix": "^0.5.2",
