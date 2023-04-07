@@ -15,7 +15,7 @@ export default {
   },
   computed: {
     contentHtml() {
-      return `"<a href="/ba_resume_2020.pdf" target="_blank" rel="noopener noreferrer">resume.pdf</a>"`
+      return `"<a href="/resume_2023.pdf" target="_blank" rel="noopener noreferrer">resume.pdf</a>"`
     }
   }
 }
