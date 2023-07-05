@@ -23,7 +23,7 @@
       <technologies class="mb-6" />
       <skills class="mb-6" />
       <interests v-if="false" class="mb-6" />
-      <projects class="mb-6" />
+      <projects v-if="false" class="mb-6" />
       <blank />
     </div>
   </div>

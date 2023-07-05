@@ -2,14 +2,11 @@
   <section>
     <h3 class="text-2xl mb-4">Let me introduce myself! 👋</h3>
     <p>
-      I'm a <strong>Senior Software Engineer</strong> currently living in
-      Skopje, Macedonia, aged {{ new Date().getFullYear() - 1994 }}. Devoted to
-      my mission to <strong>inspire and motivate people to do better</strong>, I
-      always try to be kind, humble, and give back to the people around me.
-      Having people around me who care about my successes and failures,
-      accomplishing the tasks that I set for myself, achieving long-term goals,
-      and putting efforts into preserving our environment are
-      <strong>things that make me happy.</strong>
+      Hi, I'm Bojan and I'm {{ new Date().getFullYear() - 1994 }}. 
+      Currently living in Skopje, Macedonia. 
+      As a <strong>Tech Lead</strong> at <a href="https://injectivelabs.org" target="_blank" rel="noopener noreferrer">InjectiveLabs</a>, 
+      I have the privilege of being part of a dynamic and innovative team that is 
+      driving amazing technological advancements in DeFi.
     </p>
     <p>
       I have completed my
@@ -17,27 +14,23 @@
       <a href="https://etf.bg.ac.rs" target="_blank" rel="noopener noreferrer">
         University of Belgrade
       </a>
-      in September 2021. Keeping my skills sharp and up to date is my everyday
-      goal. I usually do that by taking courses, reading books, or building
-      stuff.
+      in September 2021. It was during my time there that I solidified the deep passion I always had for the 
+      intricacies of software development and learned the importance of staying at the <strong>forefront of emerging technologies</strong>.
     </p>
     <p>
-      As a Senior Software Engineer with over
-      <nuxt-link :to="{ name: 'skills' }"
-        >eight years of diverse development experience</nuxt-link
-      >, I build products focused on customer satisfaction. I manage
-      <strong>all aspects of the web development cycle</strong>, from concept to
+      With a solid foundation and <nuxt-link :to="{ name: 'skills' }">twelve years of experience as a developer</nuxt-link>, 
+      I have had the opportunity to contribute to various projects, gaining invaluable knowledge along the way. 
+      The ever-evolving nature of this field keeps me motivated to continuously learn, adapt, and embrace new challenges.
+      I manage <strong>all aspects of the Software Development Cycle</strong>, from concept to
       requirements definition, design, development, launch, maintenance, and
       user support. I enjoy the client-facing role and working closely with team
       members to produce <strong>high-quality deliverables.</strong>
     </p>
     <p>
-      Also, proud owner of
-      <a href="http://booksicms.com" target="_blank" rel="noopener noreferrer"
-        >Booksi</a
-      >
-      - one of the most popular Property and Home rentals CMS in the world (with
-      5.00 rating from more than 250 customers).
+      While professional accomplishments are significant, I believe that true fulfillment lies in the way we interact with and <strong>impact the lives of others.</strong> 
+      I strive to embody qualities such as <strong>humility, kindness, and giving back</strong> to the people who mean the most to me. 
+      Nurturing meaningful relationships and contributing positively to the lives of those around me is a guiding principle in both my personal and professional endeavors.
+      It is my sincerest hope that through my work, I can make a meaningful contribution to the world of technology while also<strong>inspiring others to pursue their passions</strong> and uplift those in their communities.
     </p>
     <p>
       Want to learn more? You can

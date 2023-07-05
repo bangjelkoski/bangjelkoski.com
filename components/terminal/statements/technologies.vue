@@ -21,10 +21,10 @@ export default {
   computed: {
     contentHtml() {
       return `[<br/>
-          &nbsp;&nbsp;"Web Technologies (HTML, CSS, ...)", <br/>
-          &nbsp;&nbsp;"JavaScript (Node, ES6+, TypeScript, Vue, Nuxt, React, ...)", <br/>
-          &nbsp;&nbsp;"Blockchain (Web3, Solidity, CosmosSDK, ...)", <br/>
-          &nbsp;&nbsp;"Software Development (OOP, Design Patterns, Git, ...) ",<br/>
+          &nbsp;&nbsp;"TypeScript, React, Vue, Angular ...", <br/>
+          &nbsp;&nbsp;"Blockchain, CosmosSDK, Crypto, Web3 ... ", <br/>
+          &nbsp;&nbsp;"Software Architecture, OOP, Design Patterns, TDD, ... ",<br/>
+          &nbsp;&nbsp;"",<br/>
       ]`
     }
   }

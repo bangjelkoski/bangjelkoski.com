@@ -19,11 +19,11 @@ export default {
   computed: {
     contentHtml() {
       return `[<br/>
-          &nbsp;&nbsp;"Leadership (Taking initiative, Mentoring, Inspiring others, ...)", <br/>
-          &nbsp;&nbsp;"Product Engineering (Requirements, Specs, Eliminating complexity, ...)", <br/>
-          &nbsp;&nbsp;"Software Engineering (Code Quality, Analysis and research, Debugging, ...)", <br/>
-          &nbsp;&nbsp;"Project Management (Time management, Team management, ...)", <br/>
-          &nbsp;&nbsp;"Soft Skills (Efficient communication, Team player, Reponsible, Independent, Remote work, ...)", <br/>
+          &nbsp;&nbsp;"Leadership, Team Management and Mentoring", <br/>
+          &nbsp;&nbsp;"Software Engineering, Architecture and Design", <br/>
+          &nbsp;&nbsp;"Problem Solving, Critical Thinking and Decision Making", <br/>
+          &nbsp;&nbsp;"Continuous Learning and Adaptability", <br/>
+          &nbsp;&nbsp;"Communication, Emotional Intelligence and Collaboration", <br/>
       ]`
     }
   }

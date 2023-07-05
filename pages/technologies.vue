@@ -2,75 +2,58 @@
   <section>
     <h3 class="text-2xl mb-4">Some of the technologies I use! 💻</h3>
     <p>
-      <strong class="text-orange-500">HTML5</strong> - Typing this markup
-      language and making web apps out of it for more than 7 years now. I
-      started writing HTML on Microsoft's Web Expression 3.0, which is when I
-      fell in love with web development. Trying to
-      <strong>constantly follow semantic markup</strong> for every web app I
-      build.
+      <strong class="text-orange-500">TypeScript</strong> - I am highly
+      proficient in TypeScript (JavaScript). I have hands-on experience in
+      writing clean and maintainable code using TypeScript, leveraging its
+      strong typing system and modern language features. With TypeScript, I can
+      enhance the scalability, maintainability, and overall quality of software
+      applications.
     </p>
     <p>
-      <strong class="text-orange-500">CSS3</strong> - Working for more than 7
-      years on a <strong>technology will surelly give you profiency</strong>.
-      With CSS and other CSS preprocessors like <strong>Sass/Less</strong>,
-      utilities/frameworks like <strong>TailwindCss</strong>, Material,
-      Bootstrap, Bulma, and using latest design practices I build
-      <strong
-        >UI's that are focused mainly on UX and customer satisfaction</strong
-      >.
+      <strong class="text-orange-500">Web3 and Cryptography</strong> - I have a
+      strong understanding of Web3 technologies and cryptography. I am familiar
+      with protocols and frameworks such as Ethereum, CosmosSDK, CosmWasm,
+      allowing me to develop decentralized applications (dApps) and interact
+      with smart contracts. Additionally, my knowledge of cryptography enables
+      me to implement secure and private communication protocols, cryptographic
+      algorithms, consensus mechanisms, digital signature schemes, ...
     </p>
     <p>
-      <strong class="text-orange-500">JavaScript</strong> - JavaScript is
-      probably the biggest name in application development right now. Proficient
-      in vanilla JavaScript and TypeScript with the latest ES6+ standards,
-      <strong>JavaScript is my preferred choice</strong> to build client-side
-      (also server-side nowadays) applications.
-      <strong>Vue.js is my framework of choice</strong>, and I have been using
-      it to <strong>build and scale projects for 3 years now</strong>. While
-      working on my side projects, I try to deepen my knowledge about
-      <strong>Node.js and React</strong> by using them constantly and daily. And
-      yes, I also know jQuery.
+      <strong class="text-orange-500">Blockchain and CosmosSDK</strong> - I have
+      expertise in blockchain development and am well-versed in the Cosmos SDK
+      framework. I am capable of designing, building, and deploying
+      blockchain-based applications using the Cosmos ecosystem. My knowledge
+      includes (but not limited to) creating custom modules, handling
+      transactions, implementing governance mechanisms, custom messages,
+      keepers, ante handlers - all while ensuring the security and integrity of
+      the blockchain network.
     </p>
     <p>
-      <strong class="text-orange-500">PHP</strong> - PHP is my day-to-day
-      language for
-      <strong>building web applications and API's</strong> alongside JavaScript
-      for the past 5 years. I started building websites using native PHP, and
-      then I found out Laravel. After being introduced to a framework like that
-      I never looked back ever since and I use
-      <strong>Laravel every single day</strong>. I built
-      <a href="http://booksicms.com" target="_blank" rel="noopener noreferrer"
-        >Booksi</a
-      >
-      using Laravel and Vue.js 2 years ago.
+      <strong class="text-orange-500">UI Frameworks</strong> - I am proficient
+      in various modern web development frameworks such as Vue.js, React, and
+      Angular. I have hands-on experience in building scalable and interactive
+      user interfaces using these frameworks. Additionally, I am skilled in
+      utilizing TailwindCSS, a utility-first CSS framework, to create responsive
+      and visually appealing web designs.
     </p>
     <p>
-      <strong class="text-orange-500">Databases</strong> - Even though
-      <strong>JAM stack</strong> is getting a lot of traction at the moment, we
-      all know that the biggest percentage of web applications use databases.
-      <strong>My preferred choice is MySQL</strong> because I started exploring
-      it and SQL queries when I started learning PHP. When I am building
-      <strong>Node.js applications I mainly use MongoDB</strong>. If I had to
-      pick an ORM implementation, it would be the Laravel's
-      <strong>Eloquent ARM.</strong>
+      <strong class="text-orange-500">Software Architecture</strong> - I have a
+      strong understanding of software architecture principles and best
+      practices. I am skilled in designing scalable, modular, and maintainable
+      software systems. My expertise includes defining system components,
+      establishing communication protocols, and ensuring the separation of
+      concerns. I am capable of evaluating architectural trade-offs and making
+      informed decisions to achieve optimal system performance and flexibility.
     </p>
     <p>
-      <strong class="text-orange-500">Git</strong> - Version control is really
-      important for any development process.
-      <strong>Git is present in my daily workflow</strong> both for personal and
-      work-related projects. Writing git commands is my way to go, but sometimes
-      I use SourceTree.
-      <strong>Code Reviews, rebases, merges, pull requests</strong> are some of
-      the stuff that I encounter daily.
-    </p>
-    <p>
-      <strong class="text-orange-500">Design</strong> - We all know developers
-      are usually afraid of design. That is not the case with me. I
-      <strong>fully embrace the design</strong> as one of the necessities in
-      application development.
-      <strong>Understanding UI/UX principles and apply them</strong> to the
-      projects I work on is a challenge I fully embrace. I can say I have basic
-      knowledge of Photoshop and Illustrator.
+      <strong class="text-orange-500">Design Patterns</strong> - I am
+      well-versed in various software design patterns that provide reusable
+      solutions to common design problems. I have practical experience in
+      applying design patterns such as MVC (Model-View-Controller), Observer,
+      Factory, and Singleton and many others. These patterns enhance code
+      organization, promote code reusability, and improve the maintainability of
+      software projects. I can leverage design patterns effectively to create
+      well-structured and extensible software architectures.
     </p>
   </section>
 </template>

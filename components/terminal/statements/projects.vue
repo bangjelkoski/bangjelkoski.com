@@ -15,7 +15,9 @@ export default {
   },
   computed: {
     contentHtml() {
-      return `["<a href="http://booksicms.com" target="_blank" rel="noopener noreferrer">Booksi - Propery rental and management CMS</a>"]`
+      return `[<br/>
+          &nbsp;&nbsp;"Booksi - Propery rental and management CMS"", <br/>
+      ]`
     }
   }
 }

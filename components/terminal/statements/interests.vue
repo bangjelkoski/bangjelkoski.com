@@ -2,7 +2,7 @@
   <statement class="mb-6">
     <template slot="command">$ Bojan.interests</template>
     <template slot="content">{{
-      `["Reading", "Traveling and Exploring", "Learning new technologies", "Preserving the environment and help fight climate change."]`
+      `["DeFi", "Cutting-edge Technologies", "Innovation and Disruption", "Reading", "Exploring the world"]`
     }}</template>
   </statement>
 </template>
