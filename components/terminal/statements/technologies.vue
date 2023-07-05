@@ -24,7 +24,8 @@ export default {
           &nbsp;&nbsp;"TypeScript, React, Vue, Angular ...", <br/>
           &nbsp;&nbsp;"Blockchain, CosmosSDK, Crypto, Web3 ... ", <br/>
           &nbsp;&nbsp;"Software Architecture, OOP, Design Patterns, TDD, ... ",<br/>
-          &nbsp;&nbsp;"",<br/>
+          &nbsp;&nbsp;"DeFi, EVM, SVM, IBC, CosmWasm, "<br/>
+          &nbsp;&nbsp;"..."<br/>
       ]`
     }
   }

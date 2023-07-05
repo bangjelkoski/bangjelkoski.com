@@ -1,8 +1,8 @@
 const description =
-  'I am committed and ambitions professional that can quickly assimilate new ideas and concepts and demonstrate a logical and analytical approach to solving complex problems and issues. I am able to analyze code and engineer well-researched, cost-effective and responsive solutions. I manage all aspects of the web development cycle, from concept to requirements definition, design, development, launch, maintenance and user support. I am very communicative and have a good sense of humor. I value honesty, integrity, appreciation, compassion, and empathy.'
+  'Hey! I am Bojan — MSc in Software Engineering and Tech Lead at Injective Labs. With a strong passion for technology and expertise in software development, I am driving transformative changes in the decentralized financial landscape.'
 const keywords =
-  'bojan angjelkoski, bojan, angjelkoski, blog, eloquent, tailwind, booksi, development blog, laracasts, laravel tutorials, web developer, vue, vuejs, portfolio, web applications, sass, node app, vue app, vuejs application, application development, laravel'
-const author = 'Bojan Angjelkoski <me@bangjelkoski.com>'
+  'bojan angjelkoski, bojan, angjelkoski, blog, cosmossdk, cosmos, cosmos developer, injective, injective labs, bojan injective, vue, vuejs, web3 development, dapps development, sdk-ts, defi, defi developer, defi injective, vuejs application, application development'
+const author = 'Bojan Angjelkoski <hello@abojan.me>'
 
 export const DefaultPostMetaTags = [
   { hid: 'author', name: 'author', content: author },

@@ -23,7 +23,8 @@ export default {
           &nbsp;&nbsp;"Software Engineering, Architecture and Design", <br/>
           &nbsp;&nbsp;"Problem Solving, Critical Thinking and Decision Making", <br/>
           &nbsp;&nbsp;"Continuous Learning and Adaptability", <br/>
-          &nbsp;&nbsp;"Communication, Emotional Intelligence and Collaboration", <br/>
+          &nbsp;&nbsp;"Communication, Emotional Intelligence and Collaboration" <br/>
+          &nbsp;&nbsp;"..."<br/>
       ]`
     }
   }
