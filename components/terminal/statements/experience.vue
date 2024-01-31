@@ -17,7 +17,7 @@ export default {
   computed: {
     contentHtml() {
       return `[<br/>
-          &nbsp;&nbsp;"Tech Lead at InjectiveLabs 4y+", <br/>
+          &nbsp;&nbsp;"Engineering Director at InjectiveLabs 4y+", <br/>
           &nbsp;&nbsp;"Full Stack Developer at World Trade Organization +1y", <br/>
           &nbsp;&nbsp;"Full Stack Developer at Nulisec 2y", <br/>
           &nbsp;&nbsp;"Full Stack Developer at NG Solutions 2y",<br/>

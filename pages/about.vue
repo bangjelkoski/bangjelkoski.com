@@ -4,7 +4,7 @@
     <p>
       Hi, I'm Bojan and I'm {{ new Date().getFullYear() - 1994 }}. 
       Currently living in Skopje, Macedonia. 
-      As a <strong>Tech Lead</strong> at <a href="https://injectivelabs.org" target="_blank" rel="noopener noreferrer">InjectiveLabs</a>, 
+      As an <strong>Engineering Director</strong> at <a href="https://injectivelabs.org" target="_blank" rel="noopener noreferrer">InjectiveLabs</a>, 
       I have the privilege of being part of a dynamic and innovative team that is 
       driving amazing technological advancements in DeFi.
     </p>

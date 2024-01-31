@@ -1,5 +1,5 @@
 const description =
-  'Hey! I am Bojan — MSc in Software Engineering and Tech Lead at Injective Labs. With a strong passion for technology and expertise in software development, I am driving transformative changes in the decentralized financial landscape.'
+  'Hey! I am Bojan — MSc in Software Engineering and Engineering Director at Injective Labs. With a strong passion for technology and expertise in software development, I am driving transformative changes in the decentralized financial landscape.'
 const keywords =
   'bojan angjelkoski, bojan, angjelkoski, blog, cosmossdk, cosmos, cosmos developer, injective, injective labs, bojan injective, vue, vuejs, web3 development, dapps development, sdk-ts, defi, defi developer, defi injective, vuejs application, application development'
 const author = 'Bojan Angjelkoski <hello@abojan.me>'

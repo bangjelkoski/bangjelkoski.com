@@ -18,7 +18,7 @@
             <h3
               class="uppercase text-gray-500 text-sm tracking-wide font-normal stack"
             >
-              Technical Lead
+              Engineering Director
               <span class="text-orange-500">&bull;</span> MSc in Software
               Engineering
             </h3>
