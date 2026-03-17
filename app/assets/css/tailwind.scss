@@ -1,0 +1,9 @@
+@use './components/mixins' as *;
+@use './components/fonts';
+@use './components/root';
+@use './components/lists';
+@use './components/custom';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
