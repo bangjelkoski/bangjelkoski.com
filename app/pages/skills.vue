@@ -1,79 +1,47 @@
 <script setup lang="ts">
-usePageSeo("Skills - Bojan Angjelkoski's Portfolio Website", { bodyClass: 'skills' })
+usePageSeo('Skills — Bojan Angjelkoski')
 </script>
 
 <template>
-  <section>
-    <h3 class="text-2xl mb-4">Some of the things I can do! 👨🏻‍💻</h3>
-    <p>
-      I am a committed and ambitious team lead that can quickly assimilate new
-      ideas and concepts, demonstrate a logical and analytical approach to
-      solving complex problems and issues and successfully manage a team od
-      engineers. I can analyze code and engineer well-researched, cost-effective
-      and responsive solutions. I manage all aspects of the software development
-      cycle, from concept to requirements definition, design, development,
-      launch, maintenance, and user support.
-    </p>
-    <p>
-      <strong class="text-orange-500">Team Leadership</strong>
-      - I have a proven track record of leading and guiding teams of software
-      engineers. I excel in fostering collaboration, setting clear goals, and
-      providing mentorship to my team members. My strong communication skills
-      and interpersonal abilities enable me to build strong relationships with
-      my team and effectively coordinate efforts to achieve project success.
-    </p>
-    <p>
-      <strong class="text-orange-500">Software Engineering</strong>
-      - Working as a Software Engineer for over twelve years, I have acquired a
-      deep understanding of the principles and practices of software
-      development. In addition to my experience, my education has equipped me
-      with advanced knowledge in software design, architecture, coding, testing,
-      and maintenance. I am well-versed in various software development
-      methodologies, tools, and technologies, allowing me to make informed
-      decisions and deliver high-quality solutions.
-    </p>
-    <p>
-      <strong class="text-orange-500">Project Management</strong>
-      - I am skilled in project management and have a proven ability to plan,
-      organize, and execute software projects effectively. I am adept at
-      defining project scope, managing resources, and ensuring timely delivery.
-      My strong analytical and problem-solving skills enable me to address
-      challenges and overcome obstacles that may arise during the project
-      lifecycle.
-    </p>
-    <p>
-      <strong class="text-orange-500">Product Management</strong>
-      - With my comprehensive understanding of software development, I am
-      capable of aligning technology solutions with business goals. I can
-      contribute to product management activities by analyzing market needs,
-      defining product requirements, and working closely with stakeholders to
-      deliver valuable software solutions. I strive to ensure that the products
-      I work on meet both user expectations and business objectives.
-    </p>
-    <p>
-      <strong class="text-orange-500">Debugging and Quality Assurance</strong>
-      - I have a keen eye for troubleshooting and resolving complex software
-      issues. I excel in identifying the root cause of problems and implementing
-      effective solutions. My extensive knowledge of debugging techniques and
-      tools allows me to efficiently analyze and resolve issues, ensuring the
-      stability and reliability of software systems.
-    </p>
-    <p>
-      <strong class="text-orange-500">
-        Eye for Detail and Troubleshooting
-      </strong>
-      - I possess a meticulous and detail-oriented approach to my work. I pay
-      close attention to every aspect of software development, from requirements
-      gathering to testing and deployment. My commitment to quality and
-      precision enables me to deliver software solutions that meet the highest
-      standards and exceed client expectations.
-    </p>
-    <p>
-      <strong class="text-orange-500">Disciplined and Responsible</strong>
-      - I am known for my discipline and responsibility in managing software
-      projects. I am committed to meeting deadlines, adhering to project
-      requirements, and ensuring the successful completion of tasks. My strong
-      work ethic and reliability make me a trusted professional in the industry.
-    </p>
-  </section>
+  <div class="max-w-4xl mx-auto px-6 pb-16 md:pb-24">
+    <p class="font-mono text-xs uppercase tracking-[0.25em] text-concept-coral mb-4">Skills</p>
+    <h1 class="font-display text-concept-hero-mobile md:text-[3rem] text-concept-cream tracking-tight mb-10">
+      What I do
+    </h1>
+
+    <div class="space-y-10">
+      <div>
+        <h3 class="font-display font-medium text-concept-cream mb-2">Team Leadership</h3>
+        <p class="text-concept-muted leading-relaxed">
+          Proven track record of leading engineering teams. I set clear goals, build strong working
+          relationships, and create environments where engineers do their best work.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-display font-medium text-concept-cream mb-2">Software Engineering</h3>
+        <p class="text-concept-muted leading-relaxed">
+          Over twelve years of professional experience across the full stack. Strong foundation in
+          software design, architecture, testing, and maintenance. I write code that is clear,
+          correct, and maintainable.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-display font-medium text-concept-cream mb-2">Project Management</h3>
+        <p class="text-concept-muted leading-relaxed">
+          Experienced in planning, scoping, and delivering software projects end to end.
+          I manage timelines, coordinate across teams, and keep things moving.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-display font-medium text-concept-cream mb-2">Product Thinking</h3>
+        <p class="text-concept-muted leading-relaxed">
+          Able to bridge technical execution with product goals. I work closely with stakeholders
+          to define requirements and deliver solutions that serve both users and the business.
+        </p>
+      </div>
+    </div>
+  </div>
 </template>

@@ -1,63 +1,54 @@
 <script setup lang="ts">
-usePageSeo("Technologies - Bojan Angjelkoski's Portfolio Website", { bodyClass: 'skills' })
+usePageSeo('Technologies — Bojan Angjelkoski')
 </script>
 
 <template>
-  <section>
-    <h3 class="text-2xl mb-4">Some of the technologies I use! 💻</h3>
-    <p>
-      <strong class="text-orange-500">TypeScript</strong> - I am highly
-      proficient in TypeScript (JavaScript). I have hands-on experience in
-      writing clean and maintainable code using TypeScript, leveraging its
-      strong typing system and modern language features. With TypeScript, I can
-      enhance the scalability, maintainability, and overall quality of software
-      applications.
-    </p>
-    <p>
-      <strong class="text-orange-500">Web3 and Cryptography</strong> - I have a
-      strong understanding of Web3 technologies and cryptography. I am familiar
-      with protocols and frameworks such as Ethereum, CosmosSDK, CosmWasm,
-      allowing me to develop decentralized applications (dApps) and interact
-      with smart contracts. Additionally, my knowledge of cryptography enables
-      me to implement secure and private communication protocols, cryptographic
-      algorithms, consensus mechanisms, digital signature schemes, ...
-    </p>
-    <p>
-      <strong class="text-orange-500">Blockchain and CosmosSDK</strong> - I have
-      expertise in blockchain development and am well-versed in the Cosmos SDK
-      framework. I am capable of designing, building, and deploying
-      blockchain-based applications using the Cosmos ecosystem. My knowledge
-      includes (but not limited to) creating custom modules, handling
-      transactions, implementing governance mechanisms, custom messages,
-      keepers, ante handlers - all while ensuring the security and integrity of
-      the blockchain network.
-    </p>
-    <p>
-      <strong class="text-orange-500">UI Frameworks</strong> - I am proficient
-      in various modern web development frameworks such as Vue.js, React, and
-      Angular. I have hands-on experience in building scalable and interactive
-      user interfaces using these frameworks. Additionally, I am skilled in
-      utilizing TailwindCSS, a utility-first CSS framework, to create responsive
-      and visually appealing web designs.
-    </p>
-    <p>
-      <strong class="text-orange-500">Software Architecture</strong> - I have a
-      strong understanding of software architecture principles and best
-      practices. I am skilled in designing scalable, modular, and maintainable
-      software systems. My expertise includes defining system components,
-      establishing communication protocols, and ensuring the separation of
-      concerns. I am capable of evaluating architectural trade-offs and making
-      informed decisions to achieve optimal system performance and flexibility.
-    </p>
-    <p>
-      <strong class="text-orange-500">Design Patterns</strong> - I am
-      well-versed in various software design patterns that provide reusable
-      solutions to common design problems. I have practical experience in
-      applying design patterns such as MVC (Model-View-Controller), Observer,
-      Factory, and Singleton and many others. These patterns enhance code
-      organization, promote code reusability, and improve the maintainability of
-      software projects. I can leverage design patterns effectively to create
-      well-structured and extensible software architectures.
-    </p>
-  </section>
+  <div class="max-w-4xl mx-auto px-6 pb-16 md:pb-24">
+    <p class="font-mono text-xs uppercase tracking-[0.25em] text-concept-coral mb-4">Technologies</p>
+    <h1 class="font-display text-concept-hero-mobile md:text-[3rem] text-concept-cream tracking-tight mb-10">
+      What I use
+    </h1>
+
+    <div class="space-y-10">
+      <div>
+        <h3 class="font-display font-medium text-concept-cream mb-2">TypeScript</h3>
+        <p class="text-concept-muted leading-relaxed">
+          Primary language across all projects. Deep experience with the type system,
+          build tooling, and large-scale application development.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-display font-medium text-concept-cream mb-2">Vue, React, Angular</h3>
+        <p class="text-concept-muted leading-relaxed">
+          Extensive experience building production applications with modern frontend frameworks.
+          Proficient in Nuxt, component architecture, state management, and performance optimization.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-display font-medium text-concept-cream mb-2">Blockchain and Cosmos SDK</h3>
+        <p class="text-concept-muted leading-relaxed">
+          Deep expertise in the Cosmos ecosystem — custom modules, IBC, CosmWasm, transaction handling,
+          and governance. Also experienced with EVM and SVM environments.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-display font-medium text-concept-cream mb-2">Software Architecture</h3>
+        <p class="text-concept-muted leading-relaxed">
+          Strong understanding of system design, modularity, and separation of concerns.
+          Experienced in evaluating trade-offs and designing systems that are maintainable at scale.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-display font-medium text-concept-cream mb-2">Web3 and Cryptography</h3>
+        <p class="text-concept-muted leading-relaxed">
+          Familiar with decentralized application development, smart contract interaction,
+          digital signature schemes, and secure communication protocols.
+        </p>
+      </div>
+    </div>
+  </div>
 </template>

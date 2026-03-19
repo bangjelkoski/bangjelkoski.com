@@ -16,7 +16,7 @@ I had redesigned and rebuilt my portfolio website a few times now. Since we want
 
 So, everything looks perfect now. The website is live, changing stuff on it is easy, but ...
 
-## Sometimes we need to take a break {class=marginless}
+## Sometimes we need to take a break
 
 Working on personal stuff always gives you relief and keeps you motivated because you are working for yourself, and not for someone else. Sometimes, we need to take a break from brain-intensive tasks and just work on something that isn't so demanding. Building something for yourself, even if its something that you can build for a day always kept me satisfied with the work I am doing and why I choose to become a developer in the first place. If you ever find yourself stuck in a project that seems it's going on forever and doesn't feel rewarding when you are completing tasks, take the weekend and built something for yourself.
 
@@ -24,13 +24,13 @@ Another reason why I have decided to rebuild my website is to improve its speed 
 
 So, how to improve the speed and usability of the portfolio? By building a static single page application.
 
-## The new way of building static single page application {class=marginless}
+## The new way of building static single page application
 
 A static single page application is an HTML file, with some CSS and JavaScript that doesn't require a server to load. Since we are serving static HTML pages, our visitors experience a big improvement in speed while using our website. Did you know that almost 30% of your visitors will not wait for more than 3seconds for your application to load before leaving? Sometimes, even if you optimize your web application, loading can be slower than you expected because of your server. By generating (building) a static SPA your visitors don't have to to wait for the server to receive and respond to the request, all of your pages are served instantly.
 
 There are tons of ways to build static SPA's (Nuxt, Gridsome, Gatsby, VuePress ...). These frameworks/libraries, give you pre-configured working environments which you can use to build your portfolio website fairly quickly. For this SPA, I am using Nuxt.js, which is a framework that gives you a boilerplate with a lot of configuration to make your development experience enjoyable. With Nuxt.js you can build universal web applications - SSR (server-side rendered) or client-side rendered. It also gives you a way to quickly generate a **static single page application** which is exactly what I wanted. And yes, since my preferred library for building UI's is Vue.js, adopting Nuxt.js in my workflow was pretty easy.
 
-## Generating static pages {class=marginless}
+## Generating static pages
 
 Nuxt includes a command `nuxt generate`, that generates static pages for all `.vue` files in your project's `pages` directory. Simple as that. Build your pages, run a simple command and you have a static SPA ready to be deployed. But, `nuxt generate`, doesn't generate static pages for _dynamic_ pages. A dynamic page is a page which shows content depending on a route parameter. For example, if we want to show a blog post when a visitor navigates to `blog/{post}`, the `{post}` part in the URL is the `post` that we want to show to the user. But, since we can type anything we want in the `{post}` parameter (therefore the page is dynamic), the `nuxt generate` command doesn't generate static pages for those routes.
 
@@ -38,7 +38,7 @@ One way we can solve this 'problem', is to explicitly tell Nuxt to generate stat
 
 The next thing we need to do is to be able to write and elegantly handle blog posts. Since I don't want to use any database, every post will be stored as a single markdown file. All of the posts that I would write in the future should be handled and shown properly while also generating an appropriate static page for the new post, because doing it manually would just return me back to the previous version - and I want this one **to be the last version of my portfolio I build.**
 
-## Handing of new posts and using markdown to write content {class=marginless}
+## Handing of new posts and using markdown to write content
 
 My final goal is to just make a new markdown file, commit the changes, push them to a repository and they are automatically shown on the website (later in this post a bit more about the past part). But, how to parse and convert markdown and render it in JavaScript?
 
@@ -139,7 +139,7 @@ export default {
 
 Now the only thing remaining to be completed is to show the changes when we push to our repository. Netlify and it's CI/CD tools are out of this world - which is why I am going to use their services to deploy any changes to my website automatically.
 
-## Netlify is ... magic {class=marginless}
+## Netlify is ... magic
 
 If you are following any trends in the developers' community, you have probably heard of Netlify. Netlify is a unified platform that automates your code to create performant, easily maintainable sites and web apps. They provide continuous deployment, an intelligent, global CDN; full DNS. automated HTTPS, asset acceleration, and much more.
 

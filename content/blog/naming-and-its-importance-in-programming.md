@@ -18,7 +18,7 @@ Let's see an example of a hard to read code.
 const convert = (x, y, z) => {
   const k = Object.keys(x);
 
-  return k.map(key => {
+  return k.map((key) => {
     return {
       [y]: key,
       [z]: x[key],
@@ -29,7 +29,7 @@ const convert = (x, y, z) => {
 
 If you try to understand what on the earth this function tries to achieve, you might figure it out at the end but imagine having a big piece of functionality that is written in this way. How hard it will be for someone else (even yourself when you revisit that piece of code in the future) to understand it?
 
-## Understanding the problem you are trying to solve {class=marginless}
+## Understanding the problem you are trying to solve
 
 I challenge you to have a look at code you wrote a few months ago. Can you understand what does it achieve? Can you explain to someone easily what problem were you trying to solve? You know it's not always easy to do that.
 
@@ -39,13 +39,13 @@ Yes, your focus while solving issues and writing code should be to write easily 
 
 If we want to do that, we should put extra time to investigate and learn more about the problem we are trying to solve in greater detail. This will help you flesh out the language around the problem. This should make it easier for you to describe what your code is doing to others.
 
-## Good code is self-explanatory {class=marginless}
+## Good code is self-explanatory
 
 The key takeaway from this post is to force yourself to write code that even non-technical users will understand. A good rule of thumb is: If an identifier name requires a comment, then it doesn't reveal the intent of the identifier. This doesn't state that you should try to avoid comments or only write code that doesn't need any explanation. Just try to explain your code through proper naming identifiers (variables, functions, classes ...).
 
 Lets examine different situations where you can improve your code by taking some simple steps to clarify it.
 
-### Naming should have a clear purpose {class=marginless}
+### Naming should have a clear purpose
 
 When declaring variables we should always try to name them in a way that the purpose of the variable is clear. Let's say we have a variable named `t` which stores time. Declaring this variable says nothing about its purpose. It does not evoke a sense of lapsed time. It would be better to choose a name that specifies what is being measured, and the unit of that measurement. Depending on the situation, we can declare variables like `daysSinceCreation`, `elapsedTimesInSeconds`, `daysSinceClosing`, `personAgeInDays` ...
 
@@ -85,7 +85,7 @@ Notice that the simplicity of the code has not changed. It still has the same nu
 
 With some simple name changes, it is suddenly much easier to tell what this piece of code does.
 
-### Avoid using plain values {class=marginless}
+### Avoid using plain values
 
 The so-called _magic numbers_ are numbers that appear in your source code without any explanation of what they stand for (this is also applicable to other primitive types like Booleans). Usually, this is because they are used directly rather than being referenced as a variable or constant.
 
@@ -133,7 +133,7 @@ What is the meaning of `true`? We have no idea unless you dig into the source fo
 object.mergeData({ x: 1 });
 ```
 
-### Use names you can pronounce and search {class=marginless}
+### Use names you can pronounce and search
 
 Pretend we have a variable name called `const xsq`, which is a very important abbreviation for your company. Imagine a conversation with a colleague:
 
@@ -144,18 +144,18 @@ Some developers will try to pronounce the variable as one word. Others will spel
 
 Names that consist of one letter have the problem that they can't be located easily. Imagine having a variable named `a`, and you want to find and replace all occurrences of that variable? Sounds impossible, right?
 
-### Don't use abbreviations {class=marginless}
+### Don't use abbreviations
 
 You should also try to avoid abbreviations as well. For example, let's say you're using `cat` instead of `category`. Does `cat` mean a `category` or `catalog`? (or maybe it's an actual `cat`!?)
 
 Sure, you know the answer, but it still creates ambiguity. As we saw earlier, you should avoid it as much as possible. Saving a few characters isn't worth the confusion that an abbreviation might bring.
 
-### Replace conditional expression with function/variables {class=marginless}
+### Replace conditional expression with function/variables
 
 If statements with multiple operands can often be hard to understand without a comment. We can apply a similar method as above to clarify them. Have a look at this piece of code.
 
 ```js
-if(!el.offsetWidth || !el.offsetHeight) {
+if (!el.offsetWidth || !el.offsetHeight) {
   //
 }
 ```
@@ -164,25 +164,24 @@ What is the purpose of the code above? It can have multiple purposes, one of whi
 
 ```js
 function isVisible(el) {
-    return !el.offsetWidth || !el.offsetHeight;
+  return !el.offsetWidth || !el.offsetHeight;
 }
 
-if(isVisible(el)) {
-
+if (isVisible(el)) {
 }
 
 /** OR **/
 
 const isVisible = el.offsetWidth && el.offsetHeight;
 
-if(!isVisible) {
+if (!isVisible) {
 }
 ```
 
 Extracting the conditional to a variable makes sense when the logic you want to clarify is very specific to a certain algorithm used only in one place. The most common use for this method is mathematical expressions.
 
 ```js
-return a * b + (c / d);
+return a * b + c / d;
 ```
 
 We can clarify the above by splitting the calculation:
@@ -193,8 +192,7 @@ const divisor = c / d;
 return multiplier + divisor;
 ```
 
-
-### Class and module interfaces {class=marginless}
+### Class and module interfaces
 
 Class name and object name should be noun or noun phrase (`User`, `Customer`, `Account`, etc). You should avoid words like `Data`, `Information` or `Info` (they don't give clear explanation of class or object. There can be different types of data or information). A verb as class name is highly discouraged.
 
@@ -219,8 +217,8 @@ Both of the functions have reasonable names: what they do is clear from their na
 In this example, even though we named the class and its methods clearly, we can go even further.
 
 ```js
-const BOX_OPEN = 'open';
-const BOX_CLOSED = 'closed';
+const BOX_OPEN = "open";
+const BOX_CLOSED = "closed";
 
 class Box {
   open() {
@@ -241,15 +239,14 @@ We can now see its much easier to guess the usage of our class. Notice that we o
 
 Now we can tell at a glance how the `Box` class is used. This shows that even though the first version had good names in the functions, the complete package was still confusing, and how, with simple decisions like this we can have a very big impact.
 
-
-### Use language features to your advantage  {class=marginless}
+### Use language features to your advantage
 
 We can even use some features of our chosen language to better communicate the intention behind some code. A good example of this in JavaScript are the array iteration methods.
 
 ```js
 const ids = [];
 
-for(let i = 0; i < items.length; i++) {
+for (let i = 0; i < items.length; i++) {
   ids.push(items[i].id);
 }
 ```
@@ -257,28 +254,28 @@ for(let i = 0; i < items.length; i++) {
 The above code collects a list of IDs into a new array. However, in order to know that, we need to read the whole body of the loop. Compare it with using the `map()` function.
 
 ```js
-const ids = items.map(function(item) {
+const ids = items.map(function (item) {
   return item.id;
 });
 ```
 
-In this case, we immediately know that this produces a new array of something, because that's the purpose of map(). This can be beneficial especially if you have more complicated looping logic. There's a list of other [iteration functions on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Iteration_methods){target=_blank rel="noopener noreferrer"}.
+In this case, we immediately know that this produces a new array of something, because that's the purpose of map(). This can be beneficial especially if you have more complicated looping logic. There's a list of other [iteration functions on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Iteration_methods){target=\_blank rel="noopener noreferrer"}.
 
 Another example with JavaScript is the const keyword. Often, you declare variables where the value is supposed to never change. A very common example is when loading modules with CommonJS:
 
 ```js
-var async = require('async');
+var async = require("async");
 ```
 
 We can make the intention of never changing this even more clear:
 
 ```js
-const async = require('async');
+const async = require("async");
 ```
 
 As an added benefit, if someone ever accidentally tries to change this, we'll now get an error.
 
-## Empathize with others {class=marginless}
+## Empathize with others
 
 Indeed, you're not always coding software with complex business requirements. But that doesn't mean that there isn't some merit to the idea of creating a ubiquitous language. That's what the previous example tried to show you.
 

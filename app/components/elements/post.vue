@@ -1,38 +1,39 @@
 <script setup lang="ts">
 const props = defineProps<{
   post: {
-    title: string
-    slug: string
-    date: string
-    readingTime: string
-    category: string
-    tags: string
-    excerpt: string
-    _path?: string
-  }
-}>()
+    title: string;
+    slug: string;
+    date: string;
+    readingTime: string;
+    category: string;
+    tags: string;
+    excerpt: string;
+    _path?: string;
+  };
+}>();
 
-const postTags = computed(() => props.post.tags.split(','))
-const postPath = computed(() => props.post._path || `/blog/${props.post.slug}`)
+const postPath = computed(() => props.post._path || `/blog/${props.post.slug}`);
 </script>
 
 <template>
-  <article
-    class="mb-6 sm:mb-8 md:mb-10 cursor-pointer scroll-reveal-item"
-  >
-    <h3 class="font-black text-2xl mb-2">
-      <NuxtLink :to="postPath">
-        {{ post.title }}
-      </NuxtLink>
-    </h3>
-    <p class="text-gray-600 text-sm mb-2">
-      {{ post.date }} <span class="text-orange-500">&bull;</span>
-      {{ post.readingTime }} <span class="text-orange-500">&bull;</span> in
-      {{ post.category }}
-    </p>
-    <p class="mb-4">
-      <ElementsTag v-for="(tag, index) in postTags" :key="`tag-${index}`" :tag="tag" />
-    </p>
-    <p>{{ post.excerpt }}</p>
+  <article class="mb-8">
+    <NuxtLink :to="postPath" class="group block">
+      <div
+        class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-0 mb-1"
+      >
+        <h3
+          class="text-lg font-display font-medium text-concept-cream group-hover:text-concept-coral transition-colors duration-150 sm:flex-1"
+        >
+          {{ post.title }}
+        </h3>
+        <span
+          class="font-mono text-xs text-concept-muted/60 sm:ml-4 shrink-0"
+          >{{ post.date }}</span
+        >
+      </div>
+      <p class="text-sm text-concept-muted leading-relaxed">
+        {{ post.excerpt }}
+      </p>
+    </NuxtLink>
   </article>
 </template>

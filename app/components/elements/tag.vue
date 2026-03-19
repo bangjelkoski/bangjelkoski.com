@@ -1,12 +1,12 @@
 <script setup lang="ts">
 defineProps<{
-  tag: string
-}>()
+  tag: string;
+}>();
 </script>
 
 <template>
   <span
-    class="rounded-full px-2 py-px bg-indigo-700 text-indigo-100 text-xs font-bold inline-block select-none mr-2"
+    class="text-xs font-mono text-concept-muted border border-concept-border rounded px-2 py-0.5"
   >
     {{ tag.trim() }}
   </span>

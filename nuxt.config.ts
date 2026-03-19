@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: "en" },
-      title: "Bojan Angjelkoski's Personal Portfolio",
+      title: "Bojan Angjelkoski — Director of Engineering",
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -13,15 +13,34 @@ export default defineNuxtConfig({
           content: "CUa_gYMxlqM5FtfaM94rEke1P_HI-_prKSqq3WZuOEg",
         },
       ],
-      link: [{ rel: "icon", type: "image/png", href: "/favicons/32x32.png" }],
+      link: [
+        { rel: "icon", type: "image/png", href: "/favicons/32x32.png" },
+        {
+          rel: "preload",
+          href: "/fonts/space-grotesk/space-grotesk-latin-500.woff2",
+          as: "font",
+          type: "font/woff2",
+          crossorigin: "",
+        },
+        {
+          rel: "preload",
+          href: "/fonts/space-grotesk/space-grotesk-latin-700.woff2",
+          as: "font",
+          type: "font/woff2",
+          crossorigin: "",
+        },
+      ],
+      script: [
+        {
+          innerHTML: `(function(){try{var t=localStorage.getItem('theme');var d=t==='dark';if(d)document.documentElement.classList.add('dark')}catch(e){}})()`,
+          type: "text/javascript",
+        },
+      ],
     },
-    pageTransition: { name: "page", mode: "out-in" },
   },
 
-  vite: {
-    optimizeDeps: {
-      include: ["@nuxtjs/mdc"],
-    },
+  nitro: {
+    preset: 'netlify',
   },
 
   modules: [
@@ -54,7 +73,10 @@ export default defineNuxtConfig({
     build: {
       markdown: {
         highlight: {
-          theme: "one-dark-pro",
+          theme: {
+            default: "github-light",
+            dark: "github-dark",
+          },
         },
       },
     },

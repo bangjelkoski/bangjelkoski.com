@@ -22,7 +22,7 @@ $users = User::where('username', 'LIKE', "%{$username}%")
 
 There are two way to do this, so I am going to cover both of them now and explain when to use which approach.
 
-## First approach: Using macros {class=marginless}
+## First approach: Using macros
 
 This approach is good when you want to include the search to all of your models, and now just one of them. Using macros you can _simply create a function that will give you the possibility of chaining **Eloquent query** into one function and calling it anywhere within your application._
 
@@ -68,7 +68,7 @@ User::whereLike(['username', 'email'], $search)
   ->get();
 ```
 
-## Second approach: Using scopes {class=marginless}
+## Second approach: Using scopes
 
 If you dont need the 'search' functionality in all of your models, you can define a [scope](https://laravel.com/docs/5.0/eloquent#query-scopes) for your model. If we want to do this on the User model, open the `User.php` model and add the scope like this:
 

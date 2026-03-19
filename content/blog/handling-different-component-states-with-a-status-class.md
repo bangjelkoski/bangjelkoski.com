@@ -9,11 +9,12 @@ category: JavaScript
 tags: vue components, advanced vue, vue, javascript
 readingTime: "☕️ 7 min read"
 ---
+
 Web apps often require a loading state (things like loading spinners) to let a user know that an operation is taking place. These operations often take time, so it's best to let the user know something is loading, which helps improve UX, prevent form resubmissions and etc.
 
 Except `loading` states, our components can have different states as well like `completed`, `rejected`, `idle`, etc. There are different ways of handling these states, so let's go through them. In the end, I am going to show you my way of handling these states by using a simple `Status` class that is very convenient to use.
 
-### Handling component state using booleans{class=marginless}
+### Handling component state using booleans
 
 The most common example is a button that is disabled and maybe even has a loading spinner when we submit a form.
 
@@ -120,7 +121,7 @@ This is a simple `button-wrap` component that we can use within our forms and pa
 
 Having three booleans for three different states feels a bit redundant when the button can have only one state at a time. Let's see a more convenient way to do this using classes.
 
-### Handling component state using status property{class=marginless}
+### Handling component state using status property
 
 Since a component can have only one state at a time, we can simplify by having one `data` property named `status` and use `strings` to represent the state that the component is currently in. Changing the value of the `status` would be a notification to the component that its state changed. This implementation would look like this:
 
@@ -189,7 +190,7 @@ Since a component can have only one state at a time, we can simplify by having o
 
 What would happen if we want to introduce a new state? What if we want to change the `rejected` class to `error`?
 
-### Handling component state using a Status class{class=marginless}
+### Handling component state using a Status class
 
 Nothing prevents us from using JavaScript classes within our Vue components. When abstracting away a functionality I always tend to simplify and find the most pragmatic approach to the solution I am trying to solve. We can achieve such abstraction if we combine take away best parts of the solutions above. Let's build the Status class now.
 
@@ -197,75 +198,75 @@ Nothing prevents us from using JavaScript classes within our Vue components. Whe
 // classes/Status.js
 
 export const STATUS = {
-  IDLE: 'idle',
-  LOADING: 'loading',
-  COMPLETED: 'completed',
-  REJECTED: 'rejected',
-}
+  IDLE: "idle",
+  LOADING: "loading",
+  COMPLETED: "completed",
+  REJECTED: "rejected",
+};
 
 export default class Status {
   constructor(status = STATUS.IDLE) {
-    this.status = status
+    this.status = status;
   }
 
   get() {
-    return this.status
+    return this.status;
   }
 
   set(status) {
-    this.status = status
+    this.status = status;
   }
 
   is(status) {
-    return this.status === status
+    return this.status === status;
   }
 
   isLoading() {
-    return this.is(STATUS.LOADING)
+    return this.is(STATUS.LOADING);
   }
 
   isNotLoading() {
-    return !this.is(STATUS.LOADING)
+    return !this.is(STATUS.LOADING);
   }
 
   isCompleted() {
-    return this.is(STATUS.COMPLETED)
+    return this.is(STATUS.COMPLETED);
   }
 
   isIdle() {
-    return this.is(STATUS.IDLE)
+    return this.is(STATUS.IDLE);
   }
 
   isRejected() {
-    return this.is(STATUS.REJECTED)
+    return this.is(STATUS.REJECTED);
   }
 
   setLoading() {
-    this.set(STATUS.LOADING)
+    this.set(STATUS.LOADING);
   }
 
   setCompleted() {
-    this.set(STATUS.COMPLETED)
+    this.set(STATUS.COMPLETED);
   }
 
   setRejected() {
-    this.set(STATUS.ERROR)
+    this.set(STATUS.ERROR);
   }
 
   setIdle() {
-    this.set(STATUS.IDLE)
+    this.set(STATUS.IDLE);
   }
 
   toggle() {
-    this.set(this.status === STATUS.IDLE ? STATUS.LOADING : STATUS.IDLE)
+    this.set(this.status === STATUS.IDLE ? STATUS.LOADING : STATUS.IDLE);
   }
 
   toString() {
-    return this.get()
+    return this.get();
   }
 
   valueOf() {
-    return this.get()
+    return this.get();
   }
 }
 ```
@@ -338,7 +339,7 @@ export default {
 </script>
 ```
 
-If you are a *clean code* freak like me, this code looks pretty dope. Now, you can use the `Status` class anywhere and for different cases like fetching data from an API, submitting a form, toggling sates based on user actions, showing UI skeletons while prefetching data, etc.
+If you are a _clean code_ freak like me, this code looks pretty dope. Now, you can use the `Status` class anywhere and for different cases like fetching data from an API, submitting a form, toggling sates based on user actions, showing UI skeletons while prefetching data, etc.
 
 ---
 

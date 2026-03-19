@@ -31,13 +31,13 @@ The Flux design pattern consists of four parts (four different actions that need
 
 **To summarize, the main benefits are:**
 
--   The flow of the app - There are strict rules that are enforced by the dispatcher that help conserve the unidirectional flow of data within the application.
--   Unidirectional flow of data - Every change of the data goes through the dispatcher. Changing a particular store must be done within an action. A store cannot access another store directly.
--   Stores - Stores don't need to model a particular object. Storing any data in the stores is possible and common.
+- The flow of the app - There are strict rules that are enforced by the dispatcher that help conserve the unidirectional flow of data within the application.
+- Unidirectional flow of data - Every change of the data goes through the dispatcher. Changing a particular store must be done within an action. A store cannot access another store directly.
+- Stores - Stores don't need to model a particular object. Storing any data in the stores is possible and common.
 
 ---
 
-## Vuex {class=marginless}
+## Vuex
 
 _Vuex is a state management pattern + library for Vue.js applications._
 
