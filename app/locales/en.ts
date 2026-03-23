@@ -9,7 +9,7 @@ export default {
     eyebrow: "Director of Engineering",
     title: "Building with judgment, leading with depth.",
     intro:
-      "A decade of engineering — from Web Development to Director of Engineering, from local b2b marketplace to a global unicorn.",
+      "A decade of engineering — from Web Developer to Director of Engineering, from local B2B marketplace to a global unicorn.",
   },
 
   home: {
@@ -30,7 +30,7 @@ export default {
       eyebrow: "About",
       title: "Building with judgment, leading with depth.",
       intro:
-        "A decade of engineering — from founding engineer to Director, from local b2b marketplace to a global unicorn.",
+        "A decade of engineering — from founding engineer to Director, from local B2B marketplace to a global unicorn.",
     },
     contact: {
       seo: "Contact — Bojan Angjelkoski",
