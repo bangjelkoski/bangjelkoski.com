@@ -17,6 +17,7 @@ usePostSeo({
   keywords: post.value.keywords,
 })
 
+const { t } = useI18n()
 const postTags = computed(() => post.value?.tags?.split(',').map((tag: string) => tag.trim()) || [])
 const readingTime = computed(() => post.value?.readingTime || '')
 const date = computed(() => formatPostDate(post.value?.date || ''))
@@ -26,7 +27,7 @@ const date = computed(() => formatPostDate(post.value?.date || ''))
   <article v-if="post" class="flex flex-col">
     <header class="mb-8">
       <NuxtLink to="/writing" class="text-sm text-theme-secondary hover:text-theme-primary hover:underline underline-offset-4 transition-all mb-8 inline-block">
-        ← All writing
+        {{ t("pages.writing.backLink") }}
       </NuxtLink>
       <h1 class="text-[2rem] sm:text-[2.5rem] leading-[1.15] font-medium text-theme-primary tracking-tight">
         {{ post.title }}

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { isDark, init, toggle } = useTheme();
+const { t } = useI18n();
 
 onMounted(() => {
   init();
@@ -29,18 +30,18 @@ onMounted(() => {
               to="/about"
               class="text-sm text-theme-secondary hover:text-theme-primary transition-colors"
             >
-              About
+              {{ t("nav.about") }}
             </NuxtLink>
             <NuxtLink
               to="/writing"
               class="text-sm text-theme-secondary hover:text-theme-primary transition-colors"
             >
-              Blog
+              {{ t("nav.blog") }}
             </NuxtLink>
             <button
               @click="toggle"
               class="text-theme-secondary hover:text-theme-primary transition-colors mr-4"
-              aria-label="Toggle theme"
+              :aria-label="t('nav.toggleTheme')"
             >
               <svg
                 v-if="isDark"

@@ -11,6 +11,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxtjs/i18n": "^10.2.3",
     "nuxt": "^4.4.2",
     "ogl": "^1.0.11"
   },

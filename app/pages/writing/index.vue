@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { formatPostDate } from '~/utils/formatter'
 
-usePageSeo('Writing — Bojan Angjelkoski')
+const { t } = useI18n()
+usePageSeo(() => t("pages.writing.seo"))
 
 const { data: posts } = await useAsyncData('writing', () =>
   queryCollection('blog').order('date', 'DESC').all()
@@ -17,9 +18,9 @@ const formattedPosts = computed(() => (posts.value || []).map((post) => ({
 <template>
   <div class="flex flex-col gap-8">
     <SitePageIntro
-      eyebrow="Writing"
-      title="Writing."
-      intro="Thoughts on software engineering, team building, and systems design."
+      :eyebrow="t('pages.writing.eyebrow')"
+      :title="t('pages.writing.title')"
+      :intro="t('pages.writing.intro')"
     />
 
     <section>

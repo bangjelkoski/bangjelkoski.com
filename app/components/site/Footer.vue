@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { t } = useI18n()
+</script>
+
 <template>
   <footer
     class="w-full py-8 mt-12 border-t border-theme-border flex flex-col items-center gap-4"
@@ -5,7 +9,7 @@
     <SiteLiveClock />
     <div class="flex flex-col sm:flex-row justify-between items-center w-full gap-4">
     <p class="text-sm text-theme-secondary">
-      &copy; {{ new Date().getFullYear() }} Bojan Angjelkoski
+      &copy; {{ new Date().getFullYear() }} {{ t("footer.copyrightName") }}
     </p>
     <div class="flex items-center gap-6">
       <a
@@ -14,7 +18,7 @@
         rel="noopener noreferrer"
         class="text-sm text-theme-secondary hover:text-theme-primary hover:underline transition-all"
       >
-        GitHub
+        {{ t("footer.github") }}
       </a>
       <a
         href="https://linkedin.com/in/bangjelkoski"
@@ -22,7 +26,7 @@
         rel="noopener noreferrer"
         class="text-sm text-theme-secondary hover:text-theme-primary hover:underline transition-all"
       >
-        LinkedIn
+        {{ t("footer.linkedin") }}
       </a>
       <a
         href="https://x.com/bangjelkoski"
@@ -30,7 +34,7 @@
         rel="noopener noreferrer"
         class="text-sm text-theme-secondary hover:text-theme-primary hover:underline transition-all"
       >
-        Twitter / X
+        {{ t("footer.twitter") }}
       </a>
     </div>
     </div>

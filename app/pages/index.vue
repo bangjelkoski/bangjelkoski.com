@@ -1,10 +1,43 @@
 <script setup lang="ts">
+import type {
+  SiteEducationEntry,
+  SiteExperienceEntry,
+  SiteHighlight,
+  SitePersonalEntry,
+} from "~/types/site-content";
+
 import { formatPostDate } from "~/utils/formatter";
 
 usePageSeo("Bojan Angjelkoski — Director of Engineering");
 
-const experience = useExperience();
-const { highlights, education, personal } = useSiteContent();
+const { t, tm, rt } = useI18n();
+const highlights = computed(() =>
+  (tm("highlights") as SiteHighlight[]).map((highlight) => ({
+    label: rt(highlight.label),
+    items: highlight.items.map((item) => rt(item)),
+  })),
+);
+const education = computed(() =>
+  (tm("education") as SiteEducationEntry[]).map((entry) => ({
+    degree: rt(entry.degree),
+    institution: rt(entry.institution),
+    period: rt(entry.period),
+  })),
+);
+const personal = computed(() =>
+  (tm("personal") as SitePersonalEntry[]).map((item) => ({
+    label: rt(item.label),
+    value: rt(item.value),
+    ...(item.href ? { href: rt(item.href) } : {}),
+  })),
+);
+const experience = computed(() =>
+  (tm("experience") as SiteExperienceEntry[]).map((entry) => ({
+    role: rt(entry.role),
+    company: rt(entry.company),
+    period: rt(entry.period),
+  })),
+);
 
 const { data: posts } = await useAsyncData("home-writing", () =>
   queryCollection("blog").order("date", "DESC").limit(3).all(),
@@ -18,9 +51,8 @@ const featuredPosts = computed(() =>
   })),
 );
 
-
 function scrollToContent() {
-  document.getElementById('highlights')?.scrollIntoView({ behavior: 'smooth' });
+  document.getElementById("highlights")?.scrollIntoView({ behavior: "smooth" });
 }
 
 onMounted(() => {
@@ -61,7 +93,9 @@ onMounted(() => {
       <div class="relative z-10 mx-auto max-w-3xl w-full px-6">
         <SiteHomeHero />
       </div>
-      <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
+      <div
+        class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
+      >
         <p class="text-[0.625rem] text-theme-tertiary font-mono">
           <kbd
             class="px-1 py-0.5 border border-theme-border rounded text-[0.625rem]"
@@ -72,14 +106,25 @@ onMounted(() => {
             class="px-1 py-0.5 border border-theme-border rounded text-[0.625rem]"
             >k</kbd
           >
-          to scroll
+          {{ t("home.keyboardHint") }}
         </p>
         <button
           class="animate-bounce cursor-pointer opacity-80 hover:opacity-100 transition-opacity"
-          aria-label="Scroll down"
+          :aria-label="t('home.scrollDown')"
           @click="scrollToContent"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-theme-secondary">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="text-theme-secondary"
+          >
             <polyline points="6 9 12 15 18 9" />
           </svg>
         </button>
@@ -104,9 +149,10 @@ onMounted(() => {
         <a
           href="#highlights"
           class="absolute -left-4 opacity-0 group-hover:opacity-100 transition-opacity text-theme-tertiary"
-          >#</a
         >
-        <SiteScrambleText text="Highlights" />
+          #
+        </a>
+        <SiteScrambleText :text="t('home.sections.highlights')" />
       </h2>
       <div class="flex flex-col">
         <div
@@ -115,13 +161,17 @@ onMounted(() => {
           class="flex gap-6 py-2.5"
           :class="{ 'border-t border-theme-border': i > 0 }"
         >
-          <span class="text-xs text-theme-secondary font-mono w-20 shrink-0 pt-0.5">{{ highlight.label }}</span>
+          <span
+            class="text-xs text-theme-secondary font-mono w-20 shrink-0 pt-0.5"
+            >{{ highlight.label }}</span
+          >
           <div class="flex flex-col gap-1.5">
             <span
               v-for="(item, j) in highlight.items"
               :key="j"
               class="text-sm text-theme-primary leading-relaxed"
-            >{{ item }}</span>
+              >{{ item }}</span
+            >
           </div>
         </div>
       </div>
@@ -145,9 +195,10 @@ onMounted(() => {
         <a
           href="#work"
           class="absolute -left-4 opacity-0 group-hover:opacity-100 transition-opacity text-theme-tertiary"
-          >#</a
         >
-        <SiteScrambleText text="Work" />
+          #
+        </a>
+        <SiteScrambleText :text="t('home.sections.work')" />
       </h2>
       <div class="flex flex-col">
         <div
@@ -190,9 +241,10 @@ onMounted(() => {
             <a
               href="#background"
               class="absolute -left-4 opacity-0 group-hover:opacity-100 transition-opacity text-theme-tertiary"
-              >#</a
             >
-            <SiteScrambleText text="Personal" />
+              #
+            </a>
+            <SiteScrambleText :text="t('home.sections.personal')" />
           </h2>
           <div class="flex flex-col">
             <div
@@ -201,15 +253,20 @@ onMounted(() => {
               class="py-2.5"
               :class="{ 'border-t border-theme-border': i > 0 }"
             >
-              <span class="text-xs text-theme-secondary font-mono">{{ item.label }}</span>
+              <span class="text-xs text-theme-secondary font-mono">{{
+                item.label
+              }}</span>
               <a
                 v-if="item.href"
                 :href="item.href"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="text-sm text-theme-primary block underline underline-offset-4 decoration-theme-border hover:decoration-theme-primary transition-colors"
-              >{{ item.value }}</a>
-              <span v-else class="text-sm text-theme-primary block">{{ item.value }}</span>
+                >{{ item.value }}</a
+              >
+              <span v-else class="text-sm text-theme-primary block">{{
+                item.value
+              }}</span>
             </div>
           </div>
         </div>
@@ -217,7 +274,7 @@ onMounted(() => {
           <h2
             class="text-xs uppercase tracking-widest text-theme-secondary font-mono mb-3"
           >
-            <SiteScrambleText text="Education" />
+            <SiteScrambleText :text="t('home.sections.education')" />
           </h2>
           <div class="flex flex-col">
             <div
@@ -226,8 +283,12 @@ onMounted(() => {
               class="py-2.5"
               :class="{ 'border-t border-theme-border': i > 0 }"
             >
-              <span class="text-sm text-theme-primary block">{{ entry.degree }}</span>
-              <span class="text-xs text-theme-secondary font-mono">{{ entry.institution }} · {{ entry.period }}</span>
+              <span class="text-sm text-theme-primary block">{{
+                entry.degree
+              }}</span>
+              <span class="text-xs text-theme-secondary font-mono"
+                >{{ entry.institution }} · {{ entry.period }}</span
+              >
             </div>
           </div>
         </div>
@@ -252,13 +313,13 @@ onMounted(() => {
         <a
           href="#writing"
           class="absolute -left-4 opacity-0 group-hover:opacity-100 transition-opacity text-theme-tertiary"
-          >#</a
         >
-        <SiteScrambleText text="Writing" />
+          #
+        </a>
+        <SiteScrambleText :text="t('home.sections.writing')" />
       </h2>
       <SiteWritingList :posts="featuredPosts" />
     </section>
-
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { SiteContactLink } from "~/composables/useSiteContent";
+import type { SiteContactLink } from "~/types/site-content";
 
 defineProps<{
   links: SiteContactLink[];

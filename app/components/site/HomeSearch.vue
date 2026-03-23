@@ -1,18 +1,65 @@
 <script setup lang="ts">
-const { experience, projects, about, principles, contactLinks, snapshots, education, personal } =
-  useSiteContent();
+import type {
+  SiteContactLink,
+  SiteEducationEntry,
+  SiteExperienceEntry,
+  SitePersonalEntry,
+} from "~/types/site-content";
+
+const { t, tm, rt } = useI18n();
+
+const experience = computed(() =>
+  (tm("experience") as SiteExperienceEntry[]).map((entry) => ({
+    role: rt(entry.role),
+    company: rt(entry.company),
+    period: rt(entry.period),
+  })),
+);
+const about = computed(() =>
+  (tm("about") as string[]).map((paragraph) => rt(paragraph)),
+);
+const contactHrefById = {
+  email: "mailto:hello@abojan.me",
+  github: "https://github.com/bangjelkoski",
+  linkedin: "https://linkedin.com/in/bangjelkoski",
+  x: "https://x.com/bangjelkoski",
+} as const;
+const contactLinks = computed(() =>
+  (tm("contactLinks") as Array<Omit<SiteContactLink, "href">>).map((link) => ({
+    id: link.id,
+    label: rt(link.label),
+    note: rt(link.note),
+    href: contactHrefById[link.id as keyof typeof contactHrefById],
+  })),
+);
+const education = computed(() =>
+  (tm("education") as SiteEducationEntry[]).map((entry) => ({
+    degree: rt(entry.degree),
+    institution: rt(entry.institution),
+    period: rt(entry.period),
+  })),
+);
+const personal = computed(() =>
+  (tm("personal") as SitePersonalEntry[]).map((item) => ({
+    label: rt(item.label),
+    value: rt(item.value),
+    ...(item.href ? { href: rt(item.href) } : {}),
+  })),
+);
+const hints = computed(() => (tm("search.hints") as string[]).map((hint) => rt(hint)));
+const tryPrefix = computed(() => t("search.tryPrefix"));
 
 const searchItems = computed(() => {
   const items: string[] = [];
 
-  for (const e of experience) items.push(`${e.role} at ${e.company} — ${e.summary}`);
-  for (const p of projects) items.push(`${p.name} — ${p.summary}`);
-  for (const a of about) items.push(a);
-  for (const p of principles) items.push(`${p.label}: ${p.text}`);
-  for (const c of contactLinks) items.push(`${c.label}: ${c.note}`);
-  for (const s of snapshots) items.push(`${s.label}: ${s.value} — ${s.detail}`);
-  for (const e of education) items.push(`${e.degree} — ${e.institution} (${e.period})`);
-  for (const p of personal) items.push(`${p.label}: ${p.value}`);
+  for (const entry of experience.value) {
+    items.push(`${entry.role} at ${entry.company} — ${entry.period}`);
+  }
+  for (const paragraph of about.value) items.push(paragraph);
+  for (const entry of education.value) {
+    items.push(`${entry.degree} — ${entry.institution} (${entry.period})`);
+  }
+  for (const item of personal.value) items.push(`${item.label}: ${item.value}`);
 
   return items;
 });
@@ -21,23 +68,15 @@ const query = ref("");
 const focused = ref(false);
 const inputRef = ref<HTMLInputElement>();
 
-const hints = [
-  "Engineering leadership and team scaling",
-  "Frontend architecture and platform systems",
-  "Building products in the blockchain ecosystem",
-  "From zero to production at a startup",
-  "TypeScript SDKs and developer tooling",
-  "Designing systems that survive real use",
-];
-
 const animatedPlaceholder = ref("");
 let animationTimer: ReturnType<typeof setTimeout> | null = null;
 
 function startPlaceholderAnimation() {
+  if (hints.value.length === 0) return;
+
   let hintIndex = 0;
   let charIndex = 0;
   let deleting = false;
-  const prefix = "Try: ";
 
   function tick() {
     if (focused.value || query.value) {
@@ -45,22 +84,25 @@ function startPlaceholderAnimation() {
       return;
     }
 
-    const hint = hints[hintIndex];
+    const hint = hints.value[hintIndex];
 
     if (!deleting) {
       charIndex++;
-      animatedPlaceholder.value = prefix + hint.slice(0, charIndex);
+      animatedPlaceholder.value = tryPrefix.value + hint.slice(0, charIndex);
       if (charIndex === hint.length) {
-        animationTimer = setTimeout(() => { deleting = true; tick(); }, 1500);
+        animationTimer = setTimeout(() => {
+          deleting = true;
+          tick();
+        }, 1500);
         return;
       }
       animationTimer = setTimeout(tick, 80);
     } else {
       charIndex--;
-      animatedPlaceholder.value = prefix + hint.slice(0, charIndex);
+      animatedPlaceholder.value = tryPrefix.value + hint.slice(0, charIndex);
       if (charIndex === 0) {
         deleting = false;
-        hintIndex = (hintIndex + 1) % hints.length;
+        hintIndex = (hintIndex + 1) % hints.value.length;
         animationTimer = setTimeout(tick, 400);
         return;
       }
@@ -115,10 +157,7 @@ function highlightMatch(text: string) {
 }
 
 function escapeHtml(str: string) {
-  return str
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
+  return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
 function onKeydown(e: KeyboardEvent) {
@@ -128,7 +167,9 @@ function onKeydown(e: KeyboardEvent) {
   }
 }
 
-const showDropdown = computed(() => focused.value && query.value.trim() && results.value.length > 0);
+const showDropdown = computed(
+  () => focused.value && query.value.trim() && results.value.length > 0,
+);
 </script>
 
 <template>
@@ -138,7 +179,11 @@ const showDropdown = computed(() => focused.value && query.value.trim() && resul
         ref="inputRef"
         v-model="query"
         type="text"
-        :placeholder="focused ? 'Search about me...' : animatedPlaceholder || 'Search about me...'"
+        :placeholder="
+          focused
+            ? t('search.placeholder')
+            : animatedPlaceholder || t('search.placeholder')
+        "
         class="w-full px-6 py-3.5 text-base font-mono bg-theme-surface border border-theme-border rounded-full text-theme-primary placeholder:text-theme-tertiary focus:outline-none focus:border-theme-secondary focus:ring-1 focus:ring-theme-secondary"
         @focus="focused = true"
         @blur="focused = false"
@@ -164,7 +209,9 @@ const showDropdown = computed(() => focused.value && query.value.trim() && resul
 <style scoped>
 .dropdown-enter-active,
 .dropdown-leave-active {
-  transition: opacity 0.15s ease, transform 0.15s ease;
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease;
 }
 .dropdown-enter-from,
 .dropdown-leave-to {

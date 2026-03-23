@@ -3,7 +3,6 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      htmlAttrs: { lang: "en" },
       title: "Bojan Angjelkoski — Director of Engineering",
       meta: [
         { charset: "utf-8" },
@@ -11,11 +10,19 @@ export default defineNuxtConfig({
         {
           name: "description",
           content:
-            "Bojan Angjelkoski — Director of Engineering at Injective Labs. Building teams, systems, and products that ship.",
+            "Bojan Angjelkoski — Director of Engineering at Injective Labs. Building with judgment, leading with depth.",
         },
         { name: "author", content: "Bojan Angjelkoski" },
-        { name: "theme-color", content: "#FFFFFF", media: "(prefers-color-scheme: light)" },
-        { name: "theme-color", content: "#0A0A0A", media: "(prefers-color-scheme: dark)" },
+        {
+          name: "theme-color",
+          content: "#FFFFFF",
+          media: "(prefers-color-scheme: light)",
+        },
+        {
+          name: "theme-color",
+          content: "#0A0A0A",
+          media: "(prefers-color-scheme: dark)",
+        },
         {
           name: "google-site-verification",
           content: "CUa_gYMxlqM5FtfaM94rEke1P_HI-_prKSqq3WZuOEg",
@@ -23,9 +30,23 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
-        { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicons/32x32.png" },
-        { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicons/16x16.png" },
-        { rel: "apple-touch-icon", sizes: "512x512", href: "/favicons/512x512.png" },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "32x32",
+          href: "/favicons/32x32.png",
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "16x16",
+          href: "/favicons/16x16.png",
+        },
+        {
+          rel: "apple-touch-icon",
+          sizes: "512x512",
+          href: "/favicons/512x512.png",
+        },
         {
           rel: "preload",
           href: "/fonts/space-grotesk/space-grotesk-latin-500.woff2",
@@ -51,16 +72,27 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: 'netlify',
+    preset: "netlify",
   },
 
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxt/content",
+    "@nuxtjs/i18n",
     "nuxt-gtag",
     "@nuxtjs/sitemap",
     "@vueuse/nuxt",
   ],
+
+  i18n: {
+    locales: [
+      { code: "en", language: "en-US", file: "en.ts" },
+      { code: "mk", language: "mk-MK", file: "mk.ts" },
+    ],
+    defaultLocale: "en",
+    strategy: "no_prefix",
+    langDir: "../app/locales",
+  },
 
   runtimeConfig: {
     public: {

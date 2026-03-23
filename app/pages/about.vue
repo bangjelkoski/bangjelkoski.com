@@ -1,14 +1,15 @@
 <script setup lang="ts">
-usePageSeo('About — Bojan Angjelkoski')
-const { about } = useSiteContent()
+const { t, tm, rt } = useI18n()
+usePageSeo(() => t("pages.about.seo"))
+const about = computed(() => (tm("about") as string[]).map((paragraph) => rt(paragraph)))
 </script>
 
 <template>
   <div class="flex flex-col gap-8">
     <SitePageIntro
-      eyebrow="About"
-      title="Engineering leadership, product systems, and thoughtful software execution."
-      intro="Currently leading engineering at Injective Labs. Focused on high-leverage execution, technical leadership, and building systems that scale."
+      :eyebrow="t('pages.about.eyebrow')"
+      :title="t('pages.about.title')"
+      :intro="t('pages.about.intro')"
     />
 
     <section class="max-w-2xl space-y-6">
