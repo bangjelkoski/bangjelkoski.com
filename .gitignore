@@ -10,3 +10,5 @@ dist
 .netlify
 .data
 redesign
+.claude
+.pnpm-store
