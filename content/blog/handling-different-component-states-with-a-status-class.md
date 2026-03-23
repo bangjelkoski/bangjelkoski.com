@@ -194,7 +194,7 @@ What would happen if we want to introduce a new state? What if we want to change
 
 ### Handling component state using a Status class
 
-Nothing prevents us from using JavaScript classes within our Vue components. When abstracting functionality, I always try to find the most pragmatic approach. We can achieve such abstraction if we combine take away best parts of the solutions above. Let's build the Status class now.
+Nothing prevents us from using JavaScript classes within our Vue components. When abstracting functionality, I always try to find the most pragmatic approach. We can achieve this by combining the best parts of both approaches above. Let's build the Status class now.
 
 ```javascript
 // classes/Status.js

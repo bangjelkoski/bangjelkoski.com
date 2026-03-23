@@ -44,7 +44,7 @@ User::whereLike('username', $username)
   ->get();
 ```
 
-We can still improve the macro we just wrote. This macro only covers if we want to search only one column. So, if we want to search multiple columns then we have to extend this macro to support multiple columns. If we want to perform multiple column search we are going to use the `orWhere` Eloquent's method. Lets do that.
+We can still improve the macro we just wrote. This macro only covers if we want to search only one column. So, if we want to search multiple columns then we have to extend this macro to support multiple columns. If we want to perform multiple column search we are going to use the `orWhere` Eloquent's method. Let's do that.
 
 ```php
 Builder::macro('whereLike', function($columns, $search) {

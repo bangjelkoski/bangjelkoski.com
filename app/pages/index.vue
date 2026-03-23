@@ -108,28 +108,23 @@ onMounted(() => {
         >
         <SiteScrambleText text="Highlights" />
       </h2>
-      <ul class="space-y-2">
-        <li
-          v-for="(item, i) in highlights"
+      <div class="flex flex-col">
+        <div
+          v-for="(highlight, i) in highlights"
           :key="i"
-          class="text-sm leading-relaxed text-theme-primary flex items-start gap-2.5"
+          class="flex gap-6 py-2.5"
+          :class="{ 'border-t border-theme-border': i > 0 }"
         >
-          <span
-            class="mt-[6px] block w-1 h-1 rounded-full bg-theme-tertiary shrink-0"
-          />
-          <span v-if="typeof item === 'string'">{{ item }}</span>
-          <span v-else
-            >{{ item.text
-            }}<a
-              :href="item.link.href"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="underline underline-offset-4 decoration-theme-border hover:decoration-theme-primary transition-colors"
-              >{{ item.link.label }}</a
-            >{{ item.after }}</span
-          >
-        </li>
-      </ul>
+          <span class="text-xs text-theme-secondary font-mono w-20 shrink-0 pt-0.5">{{ highlight.label }}</span>
+          <div class="flex flex-col gap-1.5">
+            <span
+              v-for="(item, j) in highlight.items"
+              :key="j"
+              class="text-sm text-theme-primary leading-relaxed"
+            >{{ item }}</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <div

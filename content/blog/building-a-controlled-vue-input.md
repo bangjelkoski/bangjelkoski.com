@@ -123,7 +123,7 @@ Vue's **v-model** directive is basically a combination of `:value="value"` and `
 <text-input v-model="value"></text-input>
 ```
 
-Using this approach what we basically did is mimic the v-model's implementation for our custom component and simplified our controlled component even more. Seems pretty neat right? Its basically as we would have a normal input field but we have a reusable component with classes, labels ...
+Using this approach what we basically did is mimic the v-model's implementation for our custom component and simplified our controlled component even more. Seems pretty neat right? It's basically the same as a normal input field, but packaged as a reusable component with classes, labels, and whatever else you need.
 
 This concept can be used also for custom check boxes and custom select form fields. Actually its best use is for custom form fields like these.
 

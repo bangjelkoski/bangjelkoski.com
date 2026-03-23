@@ -17,6 +17,11 @@ export interface SiteProject {
   href?: string;
 }
 
+export interface SiteHighlight {
+  label: string;
+  items: string[];
+}
+
 export interface SiteContactLink {
   label: string;
   href: string;
@@ -149,22 +154,27 @@ export const useSiteContent = () => {
     { label: "Resume", value: "resume.pdf", href: "/resume.pdf" },
   ];
 
-  const highlights: (
-    | string
-    | { text: string; link: { label: string; href: string }; after: string }
-  )[] = [
-    "Founding engineer at Injective Labs — built the frontend engineering function from the ground up.",
-    "Shipped core ecosystem products: exchange, wallet, hub, and bridge.",
+  const highlights: SiteHighlight[] = [
     {
-      text: "Created the ",
-      link: {
-        label: "Injective TypeScript SDK",
-        href: "https://github.com/InjectiveLabs/injective-ts",
-      },
-      after: " — used by third-party teams across the ecosystem.",
+      label: "Injective",
+      items: [
+        "Helped shape engineering from the ground up, building the team, the culture, and the processes behind a unicorn with over $76B in cumulative trading volume.",
+        "Defined the technical architecture across distributed systems, on-chain infrastructure, developer SDKs, and frontend platform foundations.",
+        "Created the developer infrastructure that opened Injective to external builders, with open-source SDKs and tooling collectively reaching 30,000+ weekly downloads across the ecosystem.",
+      ],
     },
-    "MSc in Software Engineering, University of Belgrade.",
-    "Previously at World Trade Organization, Nulisec, NG Solutions.",
+    {
+      label: "WTO",
+      items: [
+        "Took ownership of architecture, performance, and system modernization across legacy platforms at the World Trade Organization, improving tools relied on by trade delegations from 164 member nations.",
+      ],
+    },
+    {
+      label: "Nulisec",
+      items: [
+        "Built the B2B wholesale marketplace platform at Nulisec from the ground up, connecting 2,000+ FMCG suppliers and retailers across Central European markets.",
+      ],
+    },
   ];
 
   const about = [

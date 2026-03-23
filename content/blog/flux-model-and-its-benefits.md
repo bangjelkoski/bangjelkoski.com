@@ -10,9 +10,7 @@ tags: vuex, vue, flux, design patterns
 readingTime: "☕️ 5 min read"
 ---
 
-_Flux is a relatively new design pattern by Facebook for structuring client-side applications that empower the unidirectional flow of data within different components of the application._
-
-In order to understand the need and the benefits of the Flux model, we need to go back to the traditional MVC (MVC - Model View Controller) design pattern of designing applications. In general, the MVC design pattern has three parts:
+To understand why Flux matters, it helps to go back to the traditional MVC (Model View Controller) design pattern. In general, the MVC design pattern has three parts:
 
 1. Model - responsible for managing the behavior and the data of the application,
 2. View - responsible for representing the data to the end-user,
@@ -20,7 +18,7 @@ In order to understand the need and the benefits of the Flux model, we need to g
 
 Each of the three parts is separated, which provides code separation that makes code easier to maintain. The data flow in this pattern is pretty straightforward. In the past, the backend and the frontend of the application weren't separated, which made this approach very effective. Basically, the Model and the View didn't need to know anything about each other, since the communication between them went through the Controller. However, as we keep moving forward with the development of more and more complicated UI’s, separation of the client-side and the server-side is something that is considered a good practice. In large codebases, changes in the data can happen from multiple sources, and reflecting those changes in the view can get complicated — which is why developers started looking for alternatives.
 
-Reacting on changes in the data in different parts of the applications requires unidirectional data flow. Flux is all about controlling the data flow inside the application itself. With Flux, sharing data between different application components is relatively easy and simple to understand.
+Reacting to changes in the data across different parts of the application requires unidirectional data flow. Flux is all about controlling the data flow inside the application itself. With Flux, sharing data between different application components is relatively easy and simple to understand.
 
 The Flux design pattern consists of four parts (four different actions that need to be taken in order to achieve needed unidirectional data flow):
 

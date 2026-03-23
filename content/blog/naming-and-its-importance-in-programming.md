@@ -10,7 +10,7 @@ tags: computer science, programming
 readingTime: "☕️☕️ 13 min read"
 ---
 
-If you are writing code for some time you know that naming is very important in software development. We name our variables, functions, classes, modules, etc. It's proven that we spend more time reading code than we do writing it, so good naming always pays off in the future. Spending time in writing good code actually saves your time directly and indirectly.
+If you've been writing code for any amount of time, you know that naming matters. We name our variables, functions, classes, modules — everything. We spend more time reading code than writing it, so good naming always pays off. The time you invest up front saves you and your team time repeatedly down the road.
 
 Let's see an example of a hard to read code.
 
@@ -27,7 +27,7 @@ const convert = (x, y, z) => {
 };
 ```
 
-If you try to understand what on earth this function tries to achieve, you might figure it out at the end but imagine having a big piece of functionality that is written in this way. How hard it will be for someone else (even yourself when you revisit that piece of code in the future) to understand it?
+You might figure out what this function does eventually — but imagine a large feature written this way. How hard would it be for someone else, or even yourself revisiting it months later, to make sense of it?
 
 ## Understanding the problem you are trying to solve
 

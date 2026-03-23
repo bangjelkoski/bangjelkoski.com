@@ -44,7 +44,7 @@ While some of these words may sound daunting, they can be easily understood with
 
 **The SRP requires that a class should have only one reason to change.** A class that follows this principle performs just a few related tasks. You don’t need to limit your thinking to classes when considering the SRP. You can apply the principle to methods or modules, ensuring that they do just one thing and therefore have just one reason to change.
 
-Lets take a look of an example where we violate SRP:
+Let's look at an example where we violate SRP:
 
 ```ts
 import axios from "axios";
@@ -78,7 +78,7 @@ user.sendGreetingEmail();
 
 As you can see in the example above, this `User` class is responsible for many things. It contains user details, sending a welcome email, contains the email service url, constructs and sends the email message. Think of the code smells here. Why would the user need to know about which email service to use? Why would the user need to handle sending a welcome email?
 
-Lets refactor the above example so it confronts to the SRP, so we have classes (_or functions_) that have only one reason to change.
+Let's refactor the above example to conform to SRP, so each class has only one reason to change.
 
 ```ts
 import axios from "axios";
@@ -295,7 +295,7 @@ The first thing we notice for LSP is that its main focus is class inheritance. L
 
 ![Liskov Substitution Principle](/images/posts/duck-liskov.jpg)
 
-Lets translate the meme to a valid OOP code.
+Let's translate the meme into valid OOP code.
 
 ```ts
 abstract class Duck {

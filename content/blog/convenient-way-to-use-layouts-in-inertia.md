@@ -131,7 +131,7 @@ resolveComponent: (name) => {
 };
 ```
 
-Now, we have set a default Layout for all of our Inertia pages. But, we still have not solved any of the flaws we mentioned previously. Lets do that.
+Now, we have set a default Layout for all of our Inertia pages. But we still haven't solved the flaws we mentioned. Let's do that.
 
 To solve the first flaw, we can modify the code snipped above in a way that allows us to add the default Layout only if there is no layout already defined.
 
