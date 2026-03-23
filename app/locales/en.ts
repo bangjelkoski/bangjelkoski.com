@@ -139,8 +139,8 @@ export default {
 
   personal: [
     {
-      label: "Personal",
-      value: `Aged 31 · Macedonia 🇲🇰`,
+      label: "Quick facts",
+      value: `10+ years of experience · Age 31 · Macedonia 🇲🇰`,
     },
     { label: "Resume", value: "resume.pdf", href: "/resume.pdf" },
   ],
