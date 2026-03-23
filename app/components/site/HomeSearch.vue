@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { experience, projects, about, principles, contactLinks, snapshots } =
+const { experience, projects, about, principles, contactLinks, snapshots, education, personal } =
   useSiteContent();
 
 const searchItems = computed(() => {
@@ -11,6 +11,8 @@ const searchItems = computed(() => {
   for (const p of principles) items.push(`${p.label}: ${p.text}`);
   for (const c of contactLinks) items.push(`${c.label}: ${c.note}`);
   for (const s of snapshots) items.push(`${s.label}: ${s.value} — ${s.detail}`);
+  for (const e of education) items.push(`${e.degree} — ${e.institution} (${e.period})`);
+  for (const p of personal) items.push(`${p.label}: ${p.value}`);
 
   return items;
 });
@@ -137,7 +139,7 @@ const showDropdown = computed(() => focused.value && query.value.trim() && resul
         v-model="query"
         type="text"
         :placeholder="focused ? 'Search about me...' : animatedPlaceholder || 'Search about me...'"
-        class="search-input w-full px-6 py-3.5 text-base font-mono rounded-full focus:outline-none"
+        class="w-full px-6 py-3.5 text-base font-mono bg-theme-surface border border-theme-border rounded-full text-theme-primary placeholder:text-theme-tertiary focus:outline-none focus:border-theme-secondary focus:ring-1 focus:ring-theme-secondary"
         @focus="focused = true"
         @blur="focused = false"
         @keydown="onKeydown"
@@ -145,7 +147,7 @@ const showDropdown = computed(() => focused.value && query.value.trim() && resul
       <Transition name="dropdown">
         <div
           v-if="showDropdown"
-          class="search-dropdown absolute top-full left-0 right-0 mt-1 rounded-2xl shadow-lg z-50 overflow-hidden"
+          class="absolute top-full left-0 right-0 mt-1 rounded-2xl border border-theme-border bg-theme-surface shadow-lg z-50 overflow-hidden"
         >
           <div
             v-for="(item, i) in results"
@@ -159,55 +161,7 @@ const showDropdown = computed(() => focused.value && query.value.trim() && resul
   </div>
 </template>
 
-<style>
-.search-input {
-  background: #F5F5F5;
-  border: 1px solid #E5E5E5;
-  color: #171717;
-  transition: background 0.5s ease, border-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
-}
-.search-input::placeholder {
-  color: #A3A3A3;
-  transition: color 0.5s ease;
-}
-.search-input:focus {
-  border-color: #525252;
-  box-shadow: 0 0 0 1px #525252;
-}
-
-.dark .search-input {
-  background: #272727;
-  border-color: #202020;
-  color: #EDEDED;
-}
-.dark .search-input::placeholder {
-  color: #707070;
-}
-.dark .search-input:focus {
-  border-color: #A3A3A3;
-  box-shadow: 0 0 0 1px #A3A3A3;
-}
-
-.search-dropdown {
-  background: #F5F5F5;
-  border: 1px solid #E5E5E5;
-  transition: background 0.5s ease, border-color 0.5s ease;
-}
-.dark .search-dropdown {
-  background: #272727;
-  border-color: #202020;
-}
-
-.search-dropdown > div {
-  color: #525252;
-  border-color: #E5E5E5;
-  transition: color 0.5s ease, border-color 0.5s ease;
-}
-.dark .search-dropdown > div {
-  color: #A3A3A3;
-  border-color: #202020;
-}
-
+<style scoped>
 .dropdown-enter-active,
 .dropdown-leave-active {
   transition: opacity 0.15s ease, transform 0.15s ease;

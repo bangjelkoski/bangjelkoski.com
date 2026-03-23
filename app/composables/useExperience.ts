@@ -11,7 +11,7 @@ export const useExperience = (): ExperienceItem[] => [
     company: "Injective Labs",
     period: "2020–Present",
     impact:
-      "First employee. Built the frontend engineering team from zero. Shipped the exchange, wallet, hub, and developer tooling across the Injective ecosystem.",
+      "Built the frontend engineering team from the ground up. Shipped the exchange, wallet, hub, and developer tooling across the Injective ecosystem.",
   },
   {
     role: "Full Stack Developer",

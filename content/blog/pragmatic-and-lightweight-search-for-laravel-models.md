@@ -86,4 +86,4 @@ public function scopeWhereLike($query, $columns, $search) {
 
 There are many options if you need a more advanced search. Here are some of them like [Laravel Scout](https://laravel.com/docs/5.7/scout), [Algolia](https://www.algolia.com/), [Elasticsearch](https://www.elastic.co/).
 
-**Happy searching!**
+Pick the approach that fits your project scope. If you need search on most models, go with macros. If it's isolated to one or two, scopes keep things tidy.

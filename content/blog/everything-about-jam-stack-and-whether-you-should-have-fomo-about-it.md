@@ -98,6 +98,4 @@ Netlify it's just perfect for the JAM stack — notably, their CEO came up with 
 
 ---
 
-I have built several web apps that are based on the JAM Stack and most importantly - the developer experience I have while building these kinds of apps is unparalleled. I encourage you to try it out and let me know about the outcome on my [Twitter](https://twitter.com/bangjelkoski).
-
-This post was inspired by my experience with JAM stack and also these posts [JAMstack: The What, The Why and The How](https://scotch.io/tutorials/jamstack-the-what-the-why-and-the-how), [What (the Hell) Is the JAMstack?](https://medium.com/@alexsanchezdesigns/what-the-hell-is-jamstack-5ef002963f26), [Adopting the JAMStack: Building CMS-backed static websites with Vue or React](https://www.codegram.com/blog/a-jamstack-journey-headless-content-management-with-vue-react/).
+I have built several web apps on the JAM Stack and the developer experience has been unparalleled. If you haven't tried it yet, I'd encourage giving it a shot.

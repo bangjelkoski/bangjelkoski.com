@@ -12,15 +12,15 @@ const { hero } = useSiteContent();
     >
       <NuxtLink
         to="/about"
-        class="hover:underline underline-offset-4 decoration-theme-tertiary transition-all"
+        class="underline-offset-4 decoration-theme-tertiary transition-all"
       >
         <SiteScrambleText text="Bojan Angjelkoski" scramble-on-mount use-cyrillic />
       </NuxtLink>
     </h1>
-    <p class="text-sm sm:text-base leading-[1.6] text-theme-secondary max-w-lg">
+    <p class="text-sm sm:text-base leading-[1.6] text-theme-secondary max-w-lg mx-auto">
       {{
         hero.intro ||
-        "Director of Engineering at Injective Labs. First employee. Building teams, systems, and products that ship."
+        "Director of Engineering at Injective Labs. Building teams, systems, and products that ship."
       }}
     </p>
     <SiteHomeSearch class="mt-4" />

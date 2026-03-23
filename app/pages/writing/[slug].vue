@@ -24,7 +24,7 @@ const date = computed(() => formatPostDate(post.value?.date || ''))
 
 <template>
   <article v-if="post" class="flex flex-col">
-    <header class="mb-12">
+    <header class="mb-8">
       <NuxtLink to="/writing" class="text-sm text-theme-secondary hover:text-theme-primary hover:underline underline-offset-4 transition-all mb-8 inline-block">
         ← All writing
       </NuxtLink>

@@ -4,7 +4,7 @@ const { projects } = useSiteContent()
 </script>
 
 <template>
-  <div class="flex flex-col gap-12">
+  <div class="flex flex-col gap-8">
     <SitePageIntro
       eyebrow="Work"
       title="Selected work."

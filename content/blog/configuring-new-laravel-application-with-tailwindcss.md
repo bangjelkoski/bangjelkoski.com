@@ -40,4 +40,4 @@ And lastly, append to the `.scss()` function this postCSS method:
 });
 ```
 
-Now, run `yarn run dev` and you can start using Tailwind in your Laravel application! You can read more about how to use tailwind in their website. Their documentation is amazing.
+Now, run `yarn run dev` and you can start using Tailwind in your Laravel application. Their [documentation](https://tailwindcss.com/docs) covers everything you need to get productive.

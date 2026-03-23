@@ -1,5 +1,5 @@
 ---
-title: Abstracting functionality to classes (Part 1) - Handling different component states
+title: Abstracting functionality to classes - Handling different component states
 date: 2020/05/09
 slug: handling-different-component-states-with-a-status-class
 excerpt: And why you should avoid using booleans to handle components state.
@@ -10,6 +10,8 @@ tags: vue components, advanced vue, vue, javascript
 readingTime: "☕️ 7 min read"
 ---
 
+(Part 1)
+
 Web apps often require a loading state (things like loading spinners) to let a user know that an operation is taking place. These operations often take time, so it's best to let the user know something is loading, which helps improve UX, prevent form resubmissions and etc.
 
 Except `loading` states, our components can have different states as well like `completed`, `rejected`, `idle`, etc. There are different ways of handling these states, so let's go through them. In the end, I am going to show you my way of handling these states by using a simple `Status` class that is very convenient to use.
@@ -18,7 +20,7 @@ Except `loading` states, our components can have different states as well like `
 
 The most common example is a button that is disabled and maybe even has a loading spinner when we submit a form.
 
-```
+```vue
 // button-wrap.vue
 <template>
   <button v-bind="$attrs" v-on="$listeners" :disabled="isLoading">
@@ -42,7 +44,7 @@ The most common example is a button that is disabled and maybe even has a loadin
 
 This is a simple `button-wrap` component that we can use within our forms and pass a `isLoading` boolean prop whether the button should be disabled (the form is being submitted) and show a loading spinner instead of the button label. In most cases, this is probably the easiest way to handle the loading state. But, what if we need other states like `rejected`, `completed`, etc, do we pass `isRejected`, `isCompleted` booleans? Maybe for this case, it doesn't make sense, but be ensured that you will need these states somewhere along the line, and you will get cluttered with booleans just to cover all of the cases. This is with what you might end up eventually:
 
-```
+```vue
 // button-wrap.vue
 <template>
   <button v-bind="$attrs" v-on="$listeners" :disabled="isLoading && !isCompleted && !isRejected"
@@ -76,7 +78,7 @@ This is a simple `button-wrap` component that we can use within our forms and pa
 </script>
 ```
 
-```
+```vue
 //form.vue
 <template>
   <form @submit.prevent="onSubmit">
@@ -125,7 +127,7 @@ Having three booleans for three different states feels a bit redundant when the 
 
 Since a component can have only one state at a time, we can simplify by having one `data` property named `status` and use `strings` to represent the state that the component is currently in. Changing the value of the `status` would be a notification to the component that its state changed. This implementation would look like this:
 
-```
+```vue
 // button-wrap.vue
 <template>
   <button v-bind="$attrs" v-on="$listeners" :disabled="status === 'loading'"
@@ -149,7 +151,7 @@ Since a component can have only one state at a time, we can simplify by having o
 </script>
 ```
 
-```
+```vue
 //form.vue
 <template>
   <form @submit.prevent="onSubmit">
@@ -250,7 +252,7 @@ export default class Status {
   }
 
   setRejected() {
-    this.set(STATUS.ERROR);
+    this.set(STATUS.REJECTED);
   }
 
   setIdle() {
@@ -273,7 +275,7 @@ export default class Status {
 
 The class is pretty straightforward, there is no complicated logic, just simple `set` and `get` methods for all of the states we can have. Let's now integrate this class in our simple form example:
 
-```
+```vue
 // button-wrap.vue
 <template>
   <button v-bind="$attrs" v-on="$listeners" :disabled="status.isLoading()"
@@ -298,7 +300,7 @@ The class is pretty straightforward, there is no complicated logic, just simple 
 </script>
 ```
 
-```
+```vue
 //form.vue
 <template>
   <form @submit.prevent="onSubmit">

@@ -8,7 +8,7 @@ onMounted(() => {
 
 <template>
   <div
-    class="min-h-screen bg-transparent text-theme-primary transition-colors duration-500 relative font-sans"
+    class="min-h-screen bg-transparent text-theme-primary relative font-sans"
   >
     <SiteScrollProgress />
 
@@ -16,7 +16,7 @@ onMounted(() => {
       <div
         class="w-full mx-auto px-6 sm:py-4 py-8 bg-[var(--color-header)] backdrop-blur-md border-b border-transparent dark:border-white/[0.06]"
       >
-        <div class="flex items-center justify-between max-w-xl mx-auto px-6">
+        <div class="flex items-center justify-between max-w-3xl mx-auto px-6">
           <NuxtLink
             to="/"
             class="text-theme-primary hover:text-theme-secondary transition-colors"
@@ -85,7 +85,7 @@ onMounted(() => {
     </nav>
 
     <div
-      class="flex flex-col min-h-screen mx-auto max-w-xl w-full px-6 bg-[var(--color-bg)]"
+      class="flex flex-col min-h-screen mx-auto max-w-3xl w-full px-6 bg-[var(--color-bg)]"
     >
       <main class="relative flex-1 pt-28 sm:pt-20">
         <slot />

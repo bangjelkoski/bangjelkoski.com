@@ -16,7 +16,7 @@ We all know that in every modern application there is a form that needs to be fi
 
 Imagine we have a big Vue component that is used for user registration. We would at least need 4 input fields there, _Name_, _Email_, _password_ and _password confirmation_. We can bind each of the inputs to some data in the Vue component using the **v-model** directive. Basically, the component would look something like this:
 
-```
+```vue
 <template>
   /* ... */
   <input type="text" v-model="name" ...>
@@ -51,7 +51,7 @@ Looking at this form field, one thing is for sure - we don't want to write this 
 
 Now, if we want to wrap our heads around this issue, we can see that if we wrap this input field in a component, we want it to be **controlled component** - receiving value and emitting changes to the parent component. So, lets do that. We create a new **SFC (single file component)** and start implementing our desired functionality. This is how it would look like. Please note that all of our state lives in the parent component. _(Note: You cannot bind v-model to a prop, because Vue will let you know that you cannot change immutable objects. Instead, you should bind the value to the prop itself, and emit changes to the parent.)_
 
-```
+```vue
 // TextInput.vue
 
 <template>
@@ -127,6 +127,4 @@ Using this approach what we basically did is mimic the v-model's implementation 
 
 This concept can be used also for custom check boxes and custom select form fields. Actually its best use is for custom form fields like these.
 
-What do you think about this approach? If you have any questions, send me a DM on twitter @bangjelkoski or send me an email using the contact form on the homepage!
-
-**Enjoy using controlled components.**
+This concept can be extended to custom checkboxes, selects, and any other form field where you want reusability without sacrificing control.

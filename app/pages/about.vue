@@ -4,7 +4,7 @@ const { about } = useSiteContent()
 </script>
 
 <template>
-  <div class="flex flex-col gap-12">
+  <div class="flex flex-col gap-8">
     <SitePageIntro
       eyebrow="About"
       title="Engineering leadership, product systems, and thoughtful software execution."

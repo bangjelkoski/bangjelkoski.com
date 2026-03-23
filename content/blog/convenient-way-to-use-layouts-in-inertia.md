@@ -10,8 +10,6 @@ tags: inertia, laravel
 readingTime: "☕️ 8 min read"
 ---
 
-Its been a while since I wrote a blog post, but during these days we are left with a lot of free time while staying in the comfort of our homes so I decided to write some stuff up.
-
 If you are a Laravel developer, you have probably heard of [Inertia.js](https://inertiajs.com/), the modern monolith. With Inertia, you can _quickly build modern single-page React, Vue and Svelte apps using classic server-side routing and controllers._ This makes Inertia a perfect choice for building some web apps.
 
 Inertia gained a lot of traction in the past few months, so I have decided to give it a shot and build something with it. Installing and configuring it was easy, the documentation is awesome and I had no difficulties setting up my project. It took me a little bit of time to adapt to the mental model of how Inertia works, but after wrapping my head around it I started building the app.
@@ -200,4 +198,4 @@ new Vue({
 
 I didn't want to give you the solution right from the start because there was a lesson to be learned from the first approach I took, so maybe in the future you can have a _gotcha_ moment if you ever stumble across an issue like this.
 
-And remember, stay safe, stay healthy and stay home. We can only defeat this pandemic together.
+Hope this saves you some time on your next Inertia project.

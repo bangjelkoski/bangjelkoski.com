@@ -108,11 +108,10 @@ interface CharState {
 
 function initChars(): CharState[] {
   if (props.useCyrillic) {
-    return tokenize(props.text).map((t) =>
-      t.latin === " "
-        ? { char: " ", active: false }
-        : { char: getRandomCyrillic(), active: false },
-    );
+    return tokenize(props.text).map((t) => ({
+      char: t.cyrillic,
+      active: false,
+    }));
   }
   return [...props.text].map((ch) => ({ char: ch, active: false }));
 }
@@ -126,7 +125,12 @@ function scramble() {
   animating = true;
 
   if (props.useCyrillic) {
-    scrambleCyrillic();
+    // Reset to Cyrillic first, then animate to Latin
+    chars.value = tokenize(props.text).map((t) => ({
+      char: t.cyrillic,
+      active: false,
+    }));
+    setTimeout(scrambleCyrillic, 400);
   } else {
     scrambleDefault();
   }
@@ -245,7 +249,7 @@ function scrambleDefault() {
 
 onMounted(() => {
   if (props.scrambleOnMount) {
-    scramble();
+    setTimeout(scramble, props.useCyrillic ? 1200 : 0);
   }
 });
 

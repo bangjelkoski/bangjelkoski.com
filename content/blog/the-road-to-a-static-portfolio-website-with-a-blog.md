@@ -46,7 +46,7 @@ Every post has a slug in their attributes list. When a user visits a post URL, w
 
 _`formatReadingTime` and `formatPostDate` are just functions that I use to format the posts reading time and date created. `markdown-it-attrs` is a package used to parse HTML attributes added your markdown._
 
-```
+```js
 /* pages/blog/_post.vue - Handling and rendering the post */
 
 import { formatReadingTime, formatPostDate } from '~/utils/formatter';
@@ -77,7 +77,7 @@ export default {
 
 How about finding and browsing through all of the posts? Building the blog index page is simple. We just get all of the posts within our `posts` directory, get the needed attributes to display them on the page, sort them by creation date to show latest posts first and we are good to go. We can even add searching/filtering of the posts using Vue.js.
 
-```
+```js
 /* blog/index.vue - Showing all posts */
 
 const fm = require('front-matter');
@@ -110,7 +110,7 @@ export default {
 
 The last step for us to do is to configure Nuxt to generate static pages for all of the posts we have. To do this, we modify the `nuxt.config.js` config by extending the `generate` key to the default exported object.
 
-```
+```js
 /** nuxt.config.js **/
 const glob = require('glob');
 const path = require('path');

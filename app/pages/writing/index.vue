@@ -15,7 +15,7 @@ const formattedPosts = computed(() => (posts.value || []).map((post) => ({
 </script>
 
 <template>
-  <div class="flex flex-col gap-12">
+  <div class="flex flex-col gap-8">
     <SitePageIntro
       eyebrow="Writing"
       title="Writing."

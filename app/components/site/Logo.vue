@@ -8,7 +8,7 @@
   >
     <rect
       x="430" y="550" width="1200" height="950" rx="100"
-      class="fill-[#ECECEC] dark:fill-[#1C1C1C] transition-[fill] duration-500"
+      class="fill-[#ECECEC] dark:fill-[#1C1C1C]"
     />
     <g transform="translate(1030, 1025) scale(0.7) translate(-1030, -1025)" fill="var(--color-text-secondary)">
     <path

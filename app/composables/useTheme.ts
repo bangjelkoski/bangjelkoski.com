@@ -18,7 +18,11 @@ export function useTheme() {
   }
 
   function toggle() {
+    document.documentElement.classList.add("theme-transition");
     apply(!isDark.value);
+    setTimeout(() => {
+      document.documentElement.classList.remove("theme-transition");
+    }, 300);
   }
 
   return { isDark, init, toggle };

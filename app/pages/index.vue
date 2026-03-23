@@ -4,6 +4,7 @@ import { formatPostDate } from "~/utils/formatter";
 usePageSeo("Bojan Angjelkoski — Director of Engineering");
 
 const experience = useExperience();
+const { highlights, education, personal } = useSiteContent();
 
 const { data: posts } = await useAsyncData("home-writing", () =>
   queryCollection("blog").order("date", "DESC").limit(3).all(),
@@ -17,20 +18,6 @@ const featuredPosts = computed(() =>
   })),
 );
 
-const highlights = [
-  "First employee at Injective Labs — built the frontend engineering function from zero.",
-  "Shipped core ecosystem products: exchange, wallet, hub, and bridge.",
-  {
-    text: "Created the ",
-    link: {
-      label: "Injective TypeScript SDK",
-      href: "https://github.com/InjectiveLabs/injective-ts",
-    },
-    after: " — used by third-party teams across the ecosystem.",
-  },
-  "MSc in Software Engineering, University of Belgrade.",
-  "Previously at World Trade Organization, Nulisec, NG Solutions.",
-];
 
 function scrollToContent() {
   document.getElementById('highlights')?.scrollIntoView({ behavior: 'smooth' });
@@ -71,18 +58,32 @@ onMounted(() => {
       <div class="absolute inset-0 z-0 pointer-events-none opacity-50">
         <SiteWebGLCanvas />
       </div>
-      <div class="relative z-10 mx-auto max-w-xl w-full px-6">
+      <div class="relative z-10 mx-auto max-w-3xl w-full px-6">
         <SiteHomeHero />
       </div>
-      <button
-        class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 animate-bounce cursor-pointer opacity-80 hover:opacity-100 transition-opacity"
-        aria-label="Scroll down"
-        @click="scrollToContent"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-theme-secondary">
-          <polyline points="6 9 12 15 18 9" />
-        </svg>
-      </button>
+      <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
+        <p class="text-[0.625rem] text-theme-tertiary font-mono">
+          <kbd
+            class="px-1 py-0.5 border border-theme-border rounded text-[0.625rem]"
+            >j</kbd
+          >
+          /
+          <kbd
+            class="px-1 py-0.5 border border-theme-border rounded text-[0.625rem]"
+            >k</kbd
+          >
+          to scroll
+        </p>
+        <button
+          class="animate-bounce cursor-pointer opacity-80 hover:opacity-100 transition-opacity"
+          aria-label="Scroll down"
+          @click="scrollToContent"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-theme-secondary">
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </button>
+      </div>
     </div>
 
     <div
@@ -179,6 +180,70 @@ onMounted(() => {
     />
 
     <section
+      id="background"
+      style="
+        opacity: 0;
+        animation: fadeUp 0.6s ease forwards;
+        animation-delay: 0.25s;
+      "
+    >
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div>
+          <h2
+            class="text-xs uppercase tracking-widest text-theme-secondary font-mono mb-3 group relative"
+          >
+            <a
+              href="#background"
+              class="absolute -left-4 opacity-0 group-hover:opacity-100 transition-opacity text-theme-tertiary"
+              >#</a
+            >
+            <SiteScrambleText text="Personal" />
+          </h2>
+          <div class="flex flex-col">
+            <div
+              v-for="(item, i) in personal"
+              :key="i"
+              class="py-2.5"
+              :class="{ 'border-t border-theme-border': i > 0 }"
+            >
+              <span class="text-xs text-theme-secondary font-mono">{{ item.label }}</span>
+              <a
+                v-if="item.href"
+                :href="item.href"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm text-theme-primary block underline underline-offset-4 decoration-theme-border hover:decoration-theme-primary transition-colors"
+              >{{ item.value }}</a>
+              <span v-else class="text-sm text-theme-primary block">{{ item.value }}</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2
+            class="text-xs uppercase tracking-widest text-theme-secondary font-mono mb-3"
+          >
+            <SiteScrambleText text="Education" />
+          </h2>
+          <div class="flex flex-col">
+            <div
+              v-for="(entry, i) in education"
+              :key="i"
+              class="py-2.5"
+              :class="{ 'border-t border-theme-border': i > 0 }"
+            >
+              <span class="text-sm text-theme-primary block">{{ entry.degree }}</span>
+              <span class="text-xs text-theme-secondary font-mono">{{ entry.institution }} · {{ entry.period }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="h-px my-8 bg-gradient-to-r from-transparent via-theme-border to-transparent"
+    />
+
+    <section
       id="writing"
       style="
         opacity: 0;
@@ -199,19 +264,6 @@ onMounted(() => {
       <SiteWritingList :posts="featuredPosts" />
     </section>
 
-    <p class="text-[0.625rem] text-theme-tertiary font-mono mt-8 text-center">
-      Press
-      <kbd
-        class="px-1 py-0.5 border border-theme-border rounded text-[0.625rem]"
-        >j</kbd
-      >
-      /
-      <kbd
-        class="px-1 py-0.5 border border-theme-border rounded text-[0.625rem]"
-        >k</kbd
-      >
-      to scroll
-    </p>
   </div>
 </template>
 
