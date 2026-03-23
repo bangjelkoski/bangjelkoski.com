@@ -10,7 +10,7 @@ tags: vue components, advanced vue, vue
 readingTime: "☕️ 5 min read"
 ---
 
-First lets explain what a **controlled component** is. Controlled component is a component which takes its **current value** from **props**, and **notifies the parent of the changes to that value using an event.** Which means that usually, controlled components are form fields.
+First, let's explain what a **controlled component** is. A controlled component is one that takes its **current value** from **props** and **notifies the parent of changes to that value using an event.** Which means that usually, controlled components are form fields.
 
 We all know that in every modern application there is a form that needs to be filled. Every form has fields, which is why we want to build **reusable input components** that we can use in all of our forms.
 
@@ -36,7 +36,7 @@ Imagine we have a big Vue component that is used for user registration. We would
 </script>
 ```
 
-But usually, our form fields don't look like this. They have some wrapper, they have labels, they have some classes etc etc. So, lets see how would a typical form field would look like (in real app, for example using bootstrap):
+But usually, our form fields don't look like this. They have some wrapper, they have labels, they have some classes etc etc. So, let's see what a typical form field looks like (in a real app, for example using Bootstrap):
 
 ```html
 <div class="col-md-6">
@@ -49,7 +49,7 @@ But usually, our form fields don't look like this. They have some wrapper, they 
 
 Looking at this form field, one thing is for sure - we don't want to write this code every time we want to write a text input field, so we use the most important concept from Vue - **building reusable components.**
 
-Now, if we want to wrap our heads around this issue, we can see that if we wrap this input field in a component, we want it to be **controlled component** - receiving value and emitting changes to the parent component. So, lets do that. We create a new **SFC (single file component)** and start implementing our desired functionality. This is how it would look like. Please note that all of our state lives in the parent component. _(Note: You cannot bind v-model to a prop, because Vue will let you know that you cannot change immutable objects. Instead, you should bind the value to the prop itself, and emit changes to the parent.)_
+Now, if we want to wrap our heads around this issue, we can see that if we wrap this input field in a component, we want it to be a **controlled component** — receiving a value and emitting changes to the parent. So, let's do that. We create a new **SFC (single file component)** and start implementing our desired functionality. This is how it would look like. Please note that all of our state lives in the parent component. _(Note: You cannot bind v-model to a prop, because Vue will let you know that you cannot change immutable objects. Instead, you should bind the value to the prop itself, and emit changes to the parent.)_
 
 ```vue
 // TextInput.vue
@@ -107,11 +107,11 @@ What we did in this component is that we always emit the changed value to the pa
 </script>
 ```
 
-Lets break down what we do here. We send the changed value from the child component `this.$emit('handleChange', e.target.value);` and then in the parent we **catch the fired event** using `@handleChange="handleChange($event)"` and **assign the payload** we send (Vue passes the payload we send from the child component in the `$event` variable) to the value we want to update in our parent component's state. _(Note: payload can also be objects, arrays ..)_.
+Let's break down what we do here. We send the changed value from the child component `this.$emit('handleChange', e.target.value);` and then in the parent we **catch the fired event** using `@handleChange="handleChange($event)"` and **assign the payload** we send (Vue passes the payload we send from the child component in the `$event` variable) to the value we want to update in our parent component's state. _(Note: payload can also be objects, arrays ..)_.
 
-And, thats it. Now we have a fully functional controlled component that we can reuse.
+And that's it. Now we have a fully functional controlled component that we can reuse.
 
-### But what if i told you we can simplify this even further?
+### But what if I told you we can simplify this even further?
 
 Vue's **v-model** directive is basically a combination of `:value="value"` and `@input="value = $event.target.value"`. So, what we can do in our controlled component is implement those exact attributes/events and we can then use v-model in our parent component. Let me show you what i mean.
 

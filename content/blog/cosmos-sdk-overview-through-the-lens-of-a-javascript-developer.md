@@ -10,13 +10,13 @@ tags: cosmos, blockchain
 readingTime: "☕️ 10 min read"
 ---
 
-Why does a JavaScript developer write about a framework for building application-specific blockchains? Given the fact that we at [Injective Protocol](http://injectiveprotocol.com/) are building our own Injective Chain based on the Cosmos SDK, having the growth mindset and feeling the necessity for constantly evolving as a developer by exploring new concepts and tools, I had to start learning more about it.
+Why does a JavaScript developer write about a framework for building application-specific blockchains? We at [Injective Protocol](http://injectiveprotocol.com/) are building our own Injective Chain on the Cosmos SDK — that alone was enough reason for me to dig into it.
 
-So, what is the Cosmos SDK? Their official docs state that **Cosmos SDK is the world’s most popular framework for building application-specific blockchains.** Its written in [Go](https://golang.org/) programming language and uses [Tendermint](https://tendermint.com/) core as a consensus algorithm. Tendermint is responsible for the networking and the consensus layer, and Cosmos SDK handles the business logic. The Cosmos SDK and Tendermint communicate using the ABCI (*Application Blockchain Interface*). Lets deep dive into the specifics now. 
+So, what is the Cosmos SDK? Their official docs state that **Cosmos SDK is the world’s most popular framework for building application-specific blockchains.** It’s written in [Go](https://golang.org/) programming language and uses [Tendermint](https://tendermint.com/) core as a consensus algorithm. Tendermint is responsible for the networking and the consensus layer, and Cosmos SDK handles the business logic. The Cosmos SDK and Tendermint communicate using the ABCI (*Application Blockchain Interface*). Let’s get into the specifics.
 
 ## Tendermint Core
 
-Tendermint Core is a blockchain application platform; it provides the equivalent of a web-server, database, and supporting libraries for blockchain applications written in any programming language. Tendermint core is the leading BFT (Byzantine Fault Tolerance) engine for building blockchains. The safety threshold is `1/3` of the validator's power. Every block that is produced is considered final (i.e blocks have **instant finality**). Also, with the ABCI interface, Tendermint Core supports state machines written in any programming language.
+Tendermint Core is a blockchain application platform; it provides the equivalent of a web-server, database, and supporting libraries for blockchain applications written in any programming language. Tendermint Core is the leading BFT (Byzantine Fault Tolerance) engine for building blockchains. The safety threshold is `1/3` of the validator's power. Every block that is produced is considered final (i.e blocks have **instant finality**). Also, with the ABCI interface, Tendermint Core supports state machines written in any programming language.
 
 ### Tendermint BFT
 
@@ -61,7 +61,7 @@ The communication between the Cosmos SDK and Tendermint goes through the ABCI in
 Here are the most important messages of the ABCI:
 
 - **`CheckTx`:** Validate transaction. Mempool only relays valid transactions to its peers.
-- **`DeliverTx`:** Deliver transaction. Validate tx against the current state, application protocol and the cryptographic credentails.
+- **`DeliverTx`:** Deliver transaction. Validate tx against the current state, application protocol and the cryptographic credentials.
 - **`Commit`:** Persist app state to disk. Transactions are now considered final. Remain transactions in the mempool are replayed (**`CheckTx`**).
 - **`BeginBlock/EndBlock`:** Run code at the beginning/end of every block. **Every application module can define its own `BeginBlock/EndBlock` functions in their `BeginBlocker` and `EndBlocker` function within the module.**
 
@@ -73,7 +73,7 @@ The goal of the Cosmos SDK is to allow developers to easily create custom blockc
 
 The Cosmos SDK is a framework that facilitates the development of secure state machines on top of Tendermint. At its core, the SDK is a boilerplate implementation of the ABCI in Go. It comes with a multistore to persist data and a router to handle transactions. 
 
-The main components of an Cosmos SDK app are: 
+The main components of a Cosmos SDK app are:
 
 - **`Baseapp`**: Boilerplate implementation of a Cosmos SDK application. It comes with an implementation of the ABCI to handle the connection with the underlying consensus engine.
 - **`Multistore`**: The Cosmos SDK provides a multistore for persisting state. It's a store of key-value stores (KVStores).
@@ -81,7 +81,7 @@ The main components of an Cosmos SDK app are:
 - **Module Keepers**: hold a key to access the module's KVStore. Secured by [object-capability model.](https://en.wikipedia.org/wiki/Object-capability_model)
 - **Module manager**: List of the app modules which contain the application business logic.
 
-Lets dig deeper into these components.
+Let's dig deeper into these components.
 
 ### `Baseapp`
 
@@ -99,7 +99,7 @@ Store of key-value stores (KVStore). Each module contains a key to one or more K
 
 There are different types of stores:
 
-- **IAVL Store**: self-balancing binary tree. Get and Set oprations are O(log n).
+- **IAVL Store**: self-balancing binary tree. Get and Set operations are O(log n).
 - **Transcient Store**: automatically discarded at the end of the block. Useful to persist information that is only relevant per-block *(eg: parameter changes)*.
 
 ### Keepers
@@ -119,7 +119,7 @@ The center piece of the Cosmos SDK. The modules are a way to implement the busin
 - ABCI Logic (`InitChain`, `Import/ExportGenesis`, `Begin/EndBlock`)
 - Module invariants and simulation registration
 
-Thats about it. The next blog post would cover Cosmos-SDK modules and then IBC. I'll continue writing on this topic as I continue exploring myself. ✌️
+That's about it. The next post will cover Cosmos SDK modules and then IBC. I'll continue writing on this topic as I keep exploring. ✌️
 
 
 References: 

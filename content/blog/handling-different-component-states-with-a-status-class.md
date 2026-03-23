@@ -12,9 +12,9 @@ readingTime: "☕️ 7 min read"
 
 (Part 1)
 
-Web apps often require a loading state (things like loading spinners) to let a user know that an operation is taking place. These operations often take time, so it's best to let the user know something is loading, which helps improve UX, prevent form resubmissions and etc.
+Web apps often require a loading state (things like loading spinners) to let a user know that an operation is taking place. These operations often take time, so it's best to let the user know something is loading, which helps improve UX, prevent form resubmissions, etc.
 
-Except `loading` states, our components can have different states as well like `completed`, `rejected`, `idle`, etc. There are different ways of handling these states, so let's go through them. In the end, I am going to show you my way of handling these states by using a simple `Status` class that is very convenient to use.
+Beyond `loading`, our components can have other states too — `completed`, `rejected`, `idle`, etc. There are different ways of handling these states, so let's go through them. In the end, I am going to show you my way of handling these states by using a simple `Status` class that is very convenient to use.
 
 ### Handling component state using booleans
 
@@ -194,7 +194,7 @@ What would happen if we want to introduce a new state? What if we want to change
 
 ### Handling component state using a Status class
 
-Nothing prevents us from using JavaScript classes within our Vue components. When abstracting away a functionality I always tend to simplify and find the most pragmatic approach to the solution I am trying to solve. We can achieve such abstraction if we combine take away best parts of the solutions above. Let's build the Status class now.
+Nothing prevents us from using JavaScript classes within our Vue components. When abstracting functionality, I always try to find the most pragmatic approach. We can achieve such abstraction if we combine take away best parts of the solutions above. Let's build the Status class now.
 
 ```javascript
 // classes/Status.js

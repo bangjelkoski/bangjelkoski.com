@@ -10,7 +10,7 @@ tags: laravel, advanced laravel, laravel's eloquent
 readingTime: "☕️ 4 min read"
 ---
 
-You can always install [Laravel scout](https://laravel.com/docs/5.9/scout) and use some of its engines for **searching**. However sometimes we don't need that heavy-on-server search, so we can use this simple approach for **searching data** in your databases.
+You can always install [Laravel Scout](https://laravel.com/docs/5.9/scout) and use some of its engines for **searching**. However sometimes we don't need that heavy-on-server search, so we can use this simple approach for **searching data** in your databases.
 
 If you want to search for some data in the database, for example search for some _Users_ by their username or email, you can perform a search using Eloquent like this:
 
@@ -20,11 +20,11 @@ $users = User::where('username', 'LIKE', "%{$username}%")
   ->get();
 ```
 
-There are two way to do this, so I am going to cover both of them now and explain when to use which approach.
+There are two ways to do this, so I am going to cover both of them now and explain when to use which approach.
 
 ## First approach: Using macros
 
-This approach is good when you want to include the search to all of your models, and now just one of them. Using macros you can _simply create a function that will give you the possibility of chaining **Eloquent query** into one function and calling it anywhere within your application._
+This approach is good when you want to include the search across all of your models, and not just one of them. Using macros you can _simply create a function that will give you the possibility of chaining **Eloquent query** into one function and calling it anywhere within your application._
 
 If you want to define a macro, you have to do it in a **service provider**. You can either add the macro to `AppServiceProvider.php` or create a new service provider called (for example) `MacroServiceProvider.php` and place the macro in the `boot` method of the service provider. If you create a new service provider, don't forget to add it to the service providers array in `config/app.php` .
 
@@ -58,7 +58,7 @@ Builder::macro('whereLike', function($columns, $search) {
 });
 ```
 
-So now, if we pass a single column (using the array_wrap function we convert it to an array), and search that column, but if we add multiple columns in an array than we loop through all of them and search the search term in all of those columns. Everything is wrapped in an `where` query because we dont want the `whereLike` query to mess up any other `where` queries we can perform on the Eloquent model.
+So now, if we pass a single column (using the array_wrap function we convert it to an array), and search that column, but if we add multiple columns in an array than we loop through all of them and search the search term in all of those columns. Everything is wrapped in a `where` query because we don't want the `whereLike` query to mess up any other `where` queries we can perform on the Eloquent model.
 
 You can use this macro now like this:
 
@@ -70,7 +70,7 @@ User::whereLike(['username', 'email'], $search)
 
 ## Second approach: Using scopes
 
-If you dont need the 'search' functionality in all of your models, you can define a [scope](https://laravel.com/docs/5.0/eloquent#query-scopes) for your model. If we want to do this on the User model, open the `User.php` model and add the scope like this:
+If you don't need the 'search' functionality in all of your models, you can define a [scope](https://laravel.com/docs/5.0/eloquent#query-scopes) for your model. If we want to do this on the User model, open the `User.php` model and add the scope like this:
 
 ```php
 public function scopeWhereLike($query, $columns, $search) {

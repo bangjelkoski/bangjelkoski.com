@@ -27,13 +27,13 @@ const convert = (x, y, z) => {
 };
 ```
 
-If you try to understand what on the earth this function tries to achieve, you might figure it out at the end but imagine having a big piece of functionality that is written in this way. How hard it will be for someone else (even yourself when you revisit that piece of code in the future) to understand it?
+If you try to understand what on earth this function tries to achieve, you might figure it out at the end but imagine having a big piece of functionality that is written in this way. How hard it will be for someone else (even yourself when you revisit that piece of code in the future) to understand it?
 
 ## Understanding the problem you are trying to solve
 
 I challenge you to have a look at code you wrote a few months ago. Can you understand what does it achieve? Can you explain to someone easily what problem were you trying to solve? You know it's not always easy to do that.
 
-While working on some issues, we are often immersed in it to a point where it feels natural to us. As a result, what's happening is that we can find ourself in a position where it's really hard to put the problem into words so it's easy for **others to understand.**
+While working on some issues, we are often immersed in it to a point where it feels natural to us. As a result, what's happening is that we can find ourselves in a position where it's really hard to put the problem into words so it's easy for **others to understand.**
 
 Yes, your focus while solving issues and writing code should be to write easily understandable code. You should view the language around your code as your proxy. Its job is to explain the problem that your code is solving to others when you're not around.
 
@@ -43,13 +43,13 @@ If we want to do that, we should put extra time to investigate and learn more ab
 
 The key takeaway from this post is to force yourself to write code that even non-technical users will understand. A good rule of thumb is: If an identifier name requires a comment, then it doesn't reveal the intent of the identifier. This doesn't state that you should try to avoid comments or only write code that doesn't need any explanation. Just try to explain your code through proper naming identifiers (variables, functions, classes ...).
 
-Lets examine different situations where you can improve your code by taking some simple steps to clarify it.
+Let's examine different situations where you can improve your code by taking some simple steps to clarify it.
 
 ### Naming should have a clear purpose
 
 When declaring variables we should always try to name them in a way that the purpose of the variable is clear. Let's say we have a variable named `t` which stores time. Declaring this variable says nothing about its purpose. It does not evoke a sense of lapsed time. It would be better to choose a name that specifies what is being measured, and the unit of that measurement. Depending on the situation, we can declare variables like `daysSinceCreation`, `elapsedTimesInSeconds`, `daysSinceClosing`, `personAgeInDays` ...
 
-Let compare these two functions that perform the same operation.
+Let's compare these two functions that perform the same operation.
 
 ```js
 function getList(list) {
@@ -109,7 +109,7 @@ function potentialEnergy(mass, height) {
 }
 ```
 
-We can expand this rule even further. Let's say we want to express how much milliseconds are there in an hour and use it somewhere in our code.
+We can expand this rule even further. Let's say we want to express how many milliseconds there are in an hour and use it somewhere in our code.
 
 ```js
 const MILLISECONDS_IN_ONE_HOUR = 3600000;
@@ -196,7 +196,7 @@ return multiplier + divisor;
 
 Class name and object name should be noun or noun phrase (`User`, `Customer`, `Account`, etc). You should avoid words like `Data`, `Information` or `Info` (they don't give clear explanation of class or object. There can be different types of data or information). A verb as class name is highly discouraged.
 
-The interface — that is, the public methods and properties — of a class or module can act as documentation on its usage. Lets have a look at one example.
+The interface — that is, the public methods and properties — of a class or module can act as documentation on its usage. Let's have a look at one example.
 
 ```js
 class Box {

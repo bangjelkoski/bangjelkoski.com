@@ -10,7 +10,7 @@ tags: solid, typescript, design patterns
 readingTime: "☕️☕️ 19 min read"
 ---
 
-Yes, another take into explaining SOLID Design Principles. And yes, another blog post about making your code more maintainable and readable. But this time something is different - well, mostly nothing really is (_you expected something here, didn't ya?_) except that its just my perspective. A perspective gained from applying these principles in real life projects.
+Yes, another take into explaining SOLID Design Principles. And yes, another blog post about making your code more maintainable and readable. But this time something is different - well, mostly nothing really is (_you expected something here, didn't ya?_) except that it's just my perspective. A perspective gained from applying these principles in real life projects.
 
 ## What is a Design Principle?
 
@@ -24,7 +24,7 @@ Imagine you are put into a position to work on a legacy codebase that didn't hav
 
 These issues don't arise only on legacy codebases. Let's say you are working for a startup (or start one of your own), and you are in charge of a project. You start your project from a clean slate and you are in charge of its architecture and the whole development cycle. We all know that startups want to release new features and new products as fast as possible, so you end up spending less time thinking about the code structure and more about just building up new features. And this is okay if you have a _short-term_ vision for your startup. But what happens if your startup gets enough steam and is in it for the long run? How much technical debt have you introduced and how much time and money is it going to cost you while trying to scale and maintain your codebase?
 
-Implementing these design principles is not something you will waist extra time implementing. Once you understand their meaning and their usage, gain a little bit of real-life experience, they will be part of your development process - making you a better and more-seniorish-like developer.
+Implementing these design principles is not something you will waste extra time on. Once you understand their meaning and their usage, gain a little bit of real-life experience, they will be part of your development process - making you a better and more-seniorish-like developer.
 
 ## What does SOLID stand for
 
@@ -154,7 +154,7 @@ There we have it. We refactored one class that doesn't follow SRP to three class
 
 People usually stop reading and trying to understand the rest of the SOLID principles after going through SRP because they feel intimidated by the definitions and names of the remaining principles, but don't give up just yet!
 
-**The OCP requires that a class (other entities as well - functions, modules) should be open for extension but closed for modification.** This principle can be confusing at the beginning because its name is counterintuitive, but once your understand it, its the principle that will save you the most time in terms of development in the future. Its goal is to get your application to a stable state, a state where the application's core can never be broken.
+**The OCP requires that a class (other entities as well - functions, modules) should be open for extension but closed for modification.** This principle can be confusing at the beginning because its name is counterintuitive, but once you understand it, it's the principle that will save you the most time in terms of development in the future. Its goal is to get your application to a stable state, a state where the application's core can never be broken.
 
 Imagine we have an _e-commerce_ application that needs to handle different payment methods. In the beginning, lets say we have a `Checkout` class that has a `process` method that processes a `Cart` using the payment method the user selected.
 
@@ -488,7 +488,7 @@ export async function signup(email: string, password: string) {
 
 This isn't ideal. We have just created a dependency from our domain to an implementation detail (HTTP) - crossing an architectural boundary and thus violating the Dependency rule. Furthermore, **because `signup` is coupled with `HttpClient`, `signup` it can't be unit tested.**
 
-Let's reimplement it with dependency inversion this time! We're going to star by decoupleing `SignupService` and `HttpClient`.
+Let's reimplement it with dependency inversion this time! We're going to start by decoupling `SignupService` and `HttpClient`.
 
 ```ts
 // contracts/ApiClient.ts

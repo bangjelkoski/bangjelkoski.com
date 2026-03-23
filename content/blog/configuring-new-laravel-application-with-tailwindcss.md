@@ -12,11 +12,11 @@ readingTime: "☕️ 2 min read"
 
 [Tailwind](https://tailwindcss.com) is something that you have to adopt in your **daily coding**. It will make writing CSS like a breeze. Not only it will speed up your **design development**, but it will also make you a better **UI designer**.
 
-_Tailwind is a utility-first CSS framework for rapidly building custom user interfaces._ This is how they described Tailwind. Its not like any other **CSS framework** available (Bootstap, Bulma, ...), it doesn't have any predefined components, but instead you build every component on your own. Sounds difficult right? **Its not.** If you have your website to have its own identity, and not look like any other bootstrap based website online - use Tailwind.
+_Tailwind is a utility-first CSS framework for rapidly building custom user interfaces._ This is how they described Tailwind. It's not like any other **CSS framework** available (Bootstap, Bulma, ...), it doesn't have any predefined components, but instead you build every component on your own. Sounds difficult right? **Its not.** If you have your website to have its own identity, and not look like any other bootstrap based website online - use Tailwind.
 
 Setting up Tailwind for Laravel is simple. Using your terminal, craft a new Laravel application using `laravel new <app_name>` command. Then, enter the directory using `cd <app_name>`, and run `composer install`. After composer did its thing, using `yarn` install node modules. After node modules are in place, install tailwind using `yarn add tailwindcss`.
 
-After that, run `./node_modules/.bin/tailwind init` to init a configuration file for tailwind. You can configure the colors, modules, and other stuff for tailwind in tailwind.js file that was generated for you _(don't over think about this right now, you will learn how to customize tailwind to fit your needs after you play with it for a while)_.
+After that, run `./node_modules/.bin/tailwind init` to init a configuration file for tailwind. You can configure the colors, modules, and other stuff for tailwind in tailwind.js file that was generated for you _(don't overthink this right now — you'll learn how to customize Tailwind to fit your needs after you play with it for a while)_.
 
 In your main `.scss` file, add these two lines at the beginning:
 

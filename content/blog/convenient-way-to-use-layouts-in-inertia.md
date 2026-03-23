@@ -65,7 +65,7 @@ new Vue({
 }).$mount(app);
 ```
 
-Lets dive deep into this code so we can try to understand what is happening, so you can understand why I thought of this solution first.
+Let's dive into this code so you can understand why I thought of this solution first.
 
 First, we include the `InertiaApp` and inject it in our `Vue` instance. Then, we get the `selector` we want to `$mount` our Vue app in, and instantiate our `Vue` instance. The object we pass to the constructor has only one property, and its the `render` property, which as it states, renders our the app. It has one argument, `h` which is the `render function` we call to render our `InertiaApp` component.
 
@@ -105,11 +105,11 @@ props: {
 }
 ```
 
-which are then parsed and injected in the Vue instance. To simplify the flaw, the Layout did not had access to the shared data passed from our server.
+which are then parsed and injected in the Vue instance. To simplify the flaw, the Layout did not have access to the shared data passed from our server.
 
 ### Solving the flaws with a convenient solution
 
-Lets get back to our snippet above. We resolve the current page with this code
+Let's get back to our snippet above. We resolve the current page with this code
 
 ```js
 resolveComponent: (name) => require(`./Pages/${name}`).default;
@@ -150,7 +150,7 @@ resolveComponent: (name) => {
 
 We now achieved flexibility and solved the first flaw.
 
-As for the second flaw, if we have a look at the source code for the `inertia-vue/src/app.js` you can see that we have the following peace of code in the `render` function
+As for the second flaw, if we have a look at the source code for the `inertia-vue/src/app.js` you can see that we have the following piece of code in the `render` function
 
 ```js
 if (this.component.layout) {

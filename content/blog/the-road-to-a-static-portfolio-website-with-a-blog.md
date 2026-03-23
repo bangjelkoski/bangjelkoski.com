@@ -10,9 +10,9 @@ tags: web development, netlify, nuxt, vue
 readingTime: "☕️ 11 min read"
 ---
 
-The way you've built and designed your portfolio website says a lot about yourself as a developer. And why are we even building these websites? Well, I think its a really nice and convenient way to showcase your profile and introduce yourself to the world. Many newcomers that join our developers' community are building their portfolio websites as a way to learn new technology and gain a little bit of experience in building websites. Also probably because everyone is tired of making a ToDo list.
+The way you've built and designed your portfolio website says a lot about yourself as a developer. And why are we even building these websites? Well, I think it's a really nice and convenient way to showcase your profile and introduce yourself to the world. Many newcomers that join our developers' community are building their portfolio websites as a way to learn new technology and gain a little bit of experience in building websites. Also probably because everyone is tired of making a ToDo list.
 
-I had redesigned and rebuilt my portfolio website a few times now. Since we want to showcase ourself in the best possible way, I always listed my skills, projects I am working on, a little bit about myself and a contact form. The first version I built was built in native PHP, and it wasn't event uploaded online. After that, I wanted to experiment with Vue.js and I built the second version of my portfolio website, which in that time was a really nice looking and functional SPA (Single Page Application). However, I couldn't write any blog posts to express my thoughts on that version, so I redesigned it using Laravel and Tailwind by also adding a small dashboard for me to conveniently publish new blog posts, change the content on the website - because I really didn't want to upload a new version every time I want to change something.
+I had redesigned and rebuilt my portfolio website a few times now. Since we want to showcase ourselves in the best possible way, I always listed my skills, projects I am working on, a little bit about myself and a contact form. The first version I built was built in native PHP, and it wasn't event uploaded online. After that, I wanted to experiment with Vue.js and I built the second version of my portfolio website, which at the time was a really nice looking and functional SPA (Single Page Application). However, I couldn't write any blog posts to express my thoughts on that version, so I redesigned it using Laravel and Tailwind by also adding a small dashboard for me to conveniently publish new blog posts, change the content on the website - because I really didn't want to upload a new version every time I want to change something.
 
 So, everything looks perfect now. The website is live, changing stuff on it is easy, but ...
 
@@ -26,7 +26,7 @@ So, how to improve the speed and usability of the portfolio? By building a stati
 
 ## The new way of building static single page application
 
-A static single page application is an HTML file, with some CSS and JavaScript that doesn't require a server to load. Since we are serving static HTML pages, our visitors experience a big improvement in speed while using our website. Did you know that almost 30% of your visitors will not wait for more than 3seconds for your application to load before leaving? Sometimes, even if you optimize your web application, loading can be slower than you expected because of your server. By generating (building) a static SPA your visitors don't have to to wait for the server to receive and respond to the request, all of your pages are served instantly.
+A static single page application is an HTML file, with some CSS and JavaScript that doesn't require a server to load. Since we are serving static HTML pages, our visitors experience a big improvement in speed while using our website. Did you know that almost 30% of your visitors will not wait for more than 3seconds for your application to load before leaving? Sometimes, even if you optimize your web application, loading can be slower than you expected because of your server. By generating (building) a static SPA your visitors don't have to wait for the server to receive and respond to the request, all of your pages are served instantly.
 
 There are tons of ways to build static SPA's (Nuxt, Gridsome, Gatsby, VuePress ...). These frameworks/libraries, give you pre-configured working environments which you can use to build your portfolio website fairly quickly. For this SPA, I am using Nuxt.js, which is a framework that gives you a boilerplate with a lot of configuration to make your development experience enjoyable. With Nuxt.js you can build universal web applications - SSR (server-side rendered) or client-side rendered. It also gives you a way to quickly generate a **static single page application** which is exactly what I wanted. And yes, since my preferred library for building UI's is Vue.js, adopting Nuxt.js in my workflow was pretty easy.
 
@@ -151,8 +151,8 @@ So, we set up to run the `nuxt generate` command when we push to our repository'
 
 ---
 
-Everything is configured now. All of the changes I make are almost instantly show on the live version of our website. I just need to commit and that it - which is extremely easy and convenient.
+Everything is configured now. All of the changes I make are almost instantly shown on the live version of the website. I just need to commit and that it - which is extremely easy and convenient.
 
-As a final note - I prefer dark themes. I think they are better for your eyes and there won't be any light theme for this website. I might also open source the project some day.
+As a final note - I prefer dark themes. I think they are better for your eyes and there won't be any light theme for this website. I might also open-source the project some day.
 
 **Thanks for reading. I hope this post will inspire you to build your own static portfolio website 😁**

@@ -26,7 +26,7 @@ I have already highlighted some of the main benefits of using the JAM stack, but
 - **Higher Security:** JAM stack web apps are incredibly secure since you don’t have to worry about servers been hacked or database vulnerabilities.
 - **Less cost of scaling:** Cost of running a JAM stack web app is cheaper since it uses fewer resources as things like servers and databases are not necessarily needed.
 - **Better Developer Experience:** By separating the data source from the actual application, we get a greater choice of technologies. You can use any framework/library/service to build a JAM stack web app.
-- **Simpler model:** JAMStack's is a nice breeze of air in a world dominated by Docker, Kubernetes, Buildpacks & such.
+- **Simpler model:** JAMStack is a breath of fresh air in a world dominated by Docker, Kubernetes, Buildpacks & such.
 
 You can also:{class=mb-4}
 
@@ -80,7 +80,7 @@ Its backend is quite simple and flexible to most use cases, including support fo
 
 #### Prismic{class="marginless text-blue-500"}
 
-Prismic has outstanding UI and user experience. It has support for Ii8n documents, associations, responsive images, and many kinds of fields. They also have tools for working with all JavaScript frameworks (libraries) a great querying API, and much more.
+Prismic has outstanding UI and user experience. It has support for i18n documents, associations, responsive images, and many kinds of fields. They also have tools for working with all JavaScript frameworks (libraries) a great querying API, and much more.
 
 ### Deployment platforms
 
@@ -88,7 +88,7 @@ There are probably other platforms for deploying JAM stack web apps, but I have 
 
 #### Netlify{class="marginless text-teal-500"}
 
-Netlify it's just perfect for the JAM stack — notably, their CEO came up with the term — so expect it to support everything they need and more, including:{class=mb-4}
+Netlify is just perfect for the JAM stack — notably, their CEO came up with the term — so expect it to support everything they need and more, including:{class=mb-4}
 
 - Cached and automatic builds
 - Deployment previews
