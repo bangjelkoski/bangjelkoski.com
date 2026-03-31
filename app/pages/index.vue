@@ -8,7 +8,7 @@ import type {
 
 import { formatPostDate } from "~/utils/formatter";
 
-usePageSeo("Bojan Angjelkoski — Director of Engineering");
+usePageSeo("Bojan Angjelkoski — Head of Technology");
 
 const { t, tm, rt } = useI18n();
 const highlights = computed(() =>

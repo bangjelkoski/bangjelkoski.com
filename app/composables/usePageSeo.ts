@@ -1,9 +1,9 @@
 import { computed, toValue, type MaybeRefOrGetter } from "vue";
 
 const description =
-  "Bojan Angjelkoski — Director of Engineering at Injective Labs. Building teams, systems, and products that ship.";
+  "Bojan Angjelkoski — Head of Technology at Injective Labs. Building teams, systems, and products that ship.";
 const keywords =
-  "bojan angjelkoski, Director of Engineering, injective labs, software engineering, frontend engineering, typescript, vue, nuxt, web development";
+  "bojan angjelkoski, Head of Technology, injective labs, software engineering, frontend engineering, typescript, vue, nuxt, web development";
 const author = "Bojan Angjelkoski <hello@abojan.me>";
 
 export const usePageSeo = (

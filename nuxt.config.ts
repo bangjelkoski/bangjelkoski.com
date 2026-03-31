@@ -3,14 +3,14 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: "Bojan Angjelkoski — Director of Engineering",
+      title: "Bojan Angjelkoski — Head of Technology",
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         {
           name: "description",
           content:
-            "Bojan Angjelkoski — Director of Engineering at Injective Labs. Building with judgment, leading with depth.",
+            "Bojan Angjelkoski — Head of Technology at Injective Labs. Building with judgment, leading with depth.",
         },
         { name: "author", content: "Bojan Angjelkoski" },
         {

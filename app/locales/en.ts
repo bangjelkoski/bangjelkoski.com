@@ -6,10 +6,10 @@ export default {
   },
 
   hero: {
-    eyebrow: "Director of Engineering",
+    eyebrow: "Head of Technology",
     title: "Building with judgment, leading with depth.",
     intro:
-      "A decade of engineering — from Web Developer to Director of Engineering, from local B2B marketplace to a global unicorn.",
+      "A decade of engineering — from Web Developer to Head of Technology, from local B2B marketplace to a global unicorn.",
   },
 
   home: {
@@ -103,7 +103,7 @@ export default {
 
   experience: [
     {
-      role: "Director of Engineering",
+      role: "Head of Technology",
       company: "Injective Labs",
       period: "2020–Present",
     },
@@ -146,7 +146,7 @@ export default {
   ],
 
   about: [
-    "I'm a Director of Engineering with close to a decade of experience building teams, systems, and products from scratch. The work I care about sits somewhere between technical depth and leadership — not just writing good code, but creating the conditions where great software gets shipped, again and again.",
+    "I'm a Head of Technology with close to a decade of experience building teams, systems, and products from scratch. The work I care about sits somewhere between technical depth and leadership — not just writing good code, but creating the conditions where great software gets shipped, again and again.",
     "I joined Injective Labs as a founding engineer and spent the following years growing it into a fully functioning engineering organization. Along the way we shipped the exchange, hub, wallet, bridge, and the open-source infrastructure now used by builders across the ecosystem — while the platform crossed $76B in cumulative trading volume and achieved unicorn status.",
     "I care about work that requires judgment — knowing when to abstract and when to keep things simple, when to scale a team and when to stay lean, when a system needs a full rethink and when it just needs better care. That balance between technical depth and clear execution is where I do my best work.",
     "Before Injective, I worked on institutional platforms at the World Trade Organization and built marketplace infrastructure at Nulisec. I hold an MSc in Software Engineering from the University of Belgrade and I'm based in Skopje, North Macedonia.",
