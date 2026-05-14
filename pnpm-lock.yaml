@@ -37,7 +37,7 @@ importers:
         specifier: ^12.8.0
         version: 12.8.0
       eslint:
-        specifier: ^9.39.4
+        specifier: ^9.22.0
         version: 9.39.4(jiti@2.6.1)
       nuxt-gtag:
         specifier: ^4.1.0
