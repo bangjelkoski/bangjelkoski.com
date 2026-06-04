@@ -142,7 +142,7 @@ export default {
       label: "Quick facts",
       value: `10+ years of experience · Age 31 · Macedonia 🇲🇰`,
     },
-    { label: "Resume", value: "resume.pdf", href: "/resume.pdf" },
+    { label: "Resume", value: "resume.pdf", href: "/resume_2026.pdf" },
   ],
 
   about: [
